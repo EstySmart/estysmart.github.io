@@ -1,57 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080F20">
-
-  <title>EstySmart | Esther Isioma Abiazie — Professional Portfolio</title>
-
-  <meta name="description" content="Explore the professional portfolio of Esther Isioma Abiazie, known as EstySmart — Data Analyst, Multimedia Specialist, Cybersecurity and DevSecOps Enthusiast, and Digital Solutions Creator.">
-
-  <meta name="keywords" content="EstySmart, Esther Isioma Abiazie, Data Analyst, Multimedia Specialist, Graphic Designer, Visual Designer, Cybersecurity, DevSecOps, Digital Solutions Creator, Web Development, AI Prompt Engineer">
-
+  <meta name="description" content="EstySmart — Esther Isioma Abiazie. Data Analyst, Multimedia Specialist, Cybersecurity and DevSecOps Enthusiast, and Digital Solutions Creator.">
+  <meta name="keywords" content="EstySmart, Esther Isioma Abiazie, Data Analyst, Multimedia Specialist, Graphic Design, Web Development, Digital Solutions">
   <meta name="author" content="Esther Isioma Abiazie">
-
-  <meta property="og:title" content="EstySmart | Professional Portfolio">
-  <meta property="og:description" content="Creativity. Technology. Innovation. Impact.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://estysmart17.github.io/estysmart-portfolio/">
+  <meta name="theme-color" content="#080F20">
+  <title>EstySmart | Creativity. Technology. Innovation. Impact.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #080F20;
-      --bg-light: #0C172B;
-      --panel: #101D35;
-      --panel-light: #152541;
+      --bg-soft: #101D35;
+      --panel: #111D33;
       --gold: #D6AD55;
-      --gold-light: #F0D28D;
+      --gold-light: #F0D28B;
       --blue: #2585E8;
       --white: #F5F7FB;
       --muted: #AAB5C8;
-      --border: rgba(214,173,85,.22);
-      --shadow: 0 18px 50px rgba(0,0,0,.28);
-      --radius: 20px;
-      --max-width: 1180px;
+      --line: rgba(214,173,85,.23);
+      --shadow: 0 22px 60px rgba(0,0,0,.28);
+      --radius: 22px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
+      font-family: "DM Sans", sans-serif;
       color: var(--white);
+      background:
+        radial-gradient(circle at 80% 5%, rgba(37,133,232,.13), transparent 26rem),
+        radial-gradient(circle at 8% 38%, rgba(214,173,85,.07), transparent 24rem),
+        var(--bg);
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -62,6 +56,7 @@
     }
 
     img {
+      display: block;
       max-width: 100%;
     }
 
@@ -70,65 +65,113 @@
     }
 
     .container {
-      width: min(92%, var(--max-width));
-      margin: auto;
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
     }
 
-    .gold-text {
-      color: var(--gold);
-    }
-
-    .blue-text {
-      color: var(--blue);
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
     }
 
     .section {
       padding: 100px 0;
     }
 
-    .section-alt {
-      background: var(--bg-light);
-    }
-
     .section-heading {
-      max-width: 760px;
-      margin: 0 auto 48px;
-      text-align: center;
+      max-width: 720px;
+      margin-bottom: 42px;
     }
 
     .section-heading h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.2;
-      margin-bottom: 16px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      margin: 13px 0 14px;
+      letter-spacing: -.04em;
     }
 
-    .section-heading p {
+    .section-heading p,
+    .about-copy p {
       color: var(--muted);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: .19em;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .gold-text {
+      color: var(--gold-light);
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #F5E1B0, #D6AD55 48%, #83BDF4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 21px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .9rem;
+      border: 1px solid transparent;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: #101522;
+      background: linear-gradient(120deg, var(--gold-light), var(--gold));
+      box-shadow: 0 9px 28px rgba(214,173,85,.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(214,173,85,.27);
+    }
+
+    .btn-outline {
+      border-color: rgba(214,173,85,.55);
+      color: var(--white);
+      background: rgba(255,255,255,.025);
+    }
+
+    .btn-outline:hover {
+      background: rgba(214,173,85,.1);
+      transform: translateY(-3px);
     }
 
     /* NAVIGATION */
 
-    .navbar {
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8,15,32,.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      background: rgba(8,15,32,.88);
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
-    .nav-inner {
-      min-height: 88px;
+    .nav-wrap {
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -138,676 +181,560 @@
     .brand-lockup {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 17px;
       min-width: 0;
     }
 
     .logo {
-      font-size: 1.65rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+      font: 800 1.45rem "Manrope", sans-serif;
+      letter-spacing: -.07em;
       white-space: nowrap;
     }
 
-    .logo span {
+    .logo span,
+    .footer-brand span {
       color: var(--gold);
     }
 
     .brand-divider {
       width: 1px;
-      height: 42px;
-      background: var(--border);
-      flex-shrink: 0;
+      height: 38px;
+      background: var(--line);
+      flex: 0 0 auto;
     }
 
     .brand-titles {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
       color: var(--muted);
-      font-size: .64rem;
-      line-height: 1.8;
-      letter-spacing: .8px;
+      font-size: .62rem;
+      line-height: 1.5;
+      letter-spacing: .075em;
       font-weight: 700;
       text-transform: uppercase;
     }
 
     .brand-titles strong {
       color: var(--white);
-    }
-
-    .brand-titles small {
-      display: block;
-      color: var(--gold);
-      font-size: .58rem;
-      font-weight: 600;
+      font-size: .68rem;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 21px;
+      gap: 22px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: .83rem;
+      font-size: .82rem;
       font-weight: 600;
-      transition: .3s;
+      transition: color .2s;
     }
 
     .nav-links a:hover {
-      color: var(--gold);
+      color: var(--gold-light);
     }
 
     .nav-cta {
-      color: var(--bg) !important;
-      background: var(--gold);
-      padding: 10px 17px;
-      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: .78rem;
     }
 
     .menu-toggle {
       display: none;
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
       background: var(--panel);
-      color: var(--gold);
-      padding: 9px 12px;
-      border-radius: 10px;
+      color: var(--white);
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       cursor: pointer;
+      font-size: 1.2rem;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 690px;
-      display: flex;
-      align-items: center;
+      padding: 76px 0 88px;
       position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 82% 25%, rgba(37,133,232,.15), transparent 30%),
-        radial-gradient(circle at 10% 85%, rgba(214,173,85,.09), transparent 30%),
-        var(--bg);
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(214,173,85,.12);
-      border-radius: 50%;
-      right: -140px;
-      top: 70px;
-    }
-
-    .hero-content {
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.12fr .88fr;
       align-items: center;
-      gap: 65px;
-      position: relative;
-      z-index: 1;
-      padding: 80px 0;
+      gap: 58px;
     }
 
     .hero-copy h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 5.2rem);
-      line-height: 1.08;
-      margin-bottom: 18px;
+      font-size: clamp(2.65rem, 5.4vw, 5rem);
+      letter-spacing: -.065em;
+      margin: 18px 0 19px;
     }
 
-    .hero-copy h2 {
-      color: var(--gold);
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      margin-bottom: 20px;
-      font-weight: 700;
+    .hero-copy h1 span {
+      display: block;
     }
 
-    .hero-copy p {
+    .hero-copy .lead {
       color: var(--muted);
       max-width: 650px;
-      font-size: 1rem;
-      margin-bottom: 28px;
+      font-size: 1.04rem;
     }
 
-    .hero-tagline {
-      color: var(--white) !important;
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-size: .86rem !important;
-    }
-
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
+      gap: 13px;
+      margin: 28px 0;
     }
 
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 13px 23px;
-      border-radius: 30px;
-      font-weight: 800;
-      font-size: .88rem;
-      transition: .3s;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--bg);
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: var(--bg);
-    }
-
-    .hero-portrait-frame {
-      width: min(100%, 390px);
-      margin: auto;
-      padding: 11px;
-      border-radius: 220px 220px 28px 28px;
-      border: 1px solid var(--gold);
-      background: linear-gradient(145deg, rgba(214,173,85,.22), rgba(37,133,232,.12));
-      box-shadow: 0 25px 75px rgba(0,0,0,.4);
-    }
-
-    .hero-portrait {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 210px 210px 20px 20px;
-      background: var(--panel);
-    }
-
-    .hero-professional-titles {
+    .title-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin-top: 25px;
+      margin-top: 22px;
     }
 
-    .title-chip {
-      border: 1px solid var(--border);
-      background: rgba(16,29,53,.8);
-      color: var(--gold-light);
-      padding: 7px 12px;
-      border-radius: 30px;
+    .chip {
+      border: 1px solid rgba(214,173,85,.27);
+      background: rgba(255,255,255,.035);
+      color: #DCE5F3;
+      padding: 7px 11px;
+      border-radius: 999px;
       font-size: .72rem;
-      font-weight: 700;
     }
 
-    /* GENERAL CARDS */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 23px;
+    .hero-visual {
+      position: relative;
+      max-width: 440px;
+      justify-self: end;
+      width: 100%;
     }
 
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: transform .3s, border-color .3s, box-shadow .3s;
+    .portrait-glow {
+      position: absolute;
+      inset: 8% -8% -8% 8%;
+      border-radius: 38px;
+      background: linear-gradient(145deg, rgba(37,133,232,.35), rgba(214,173,85,.25));
+      filter: blur(28px);
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: var(--gold);
+    .hero-portrait-frame {
+      position: relative;
+      padding: 10px;
+      border: 1px solid rgba(214,173,85,.65);
+      border-radius: 32px;
+      background: linear-gradient(145deg, rgba(214,173,85,.2), rgba(37,133,232,.12));
       box-shadow: var(--shadow);
     }
 
-    .card-content,
-    .project-content {
-      padding: 25px;
+    /* OFFICIAL ESTYSMART PORTRAIT */
+
+    .hero-portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 24px;
+      background: var(--panel);
     }
 
-    .card h3,
-    .project-content h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 11px;
+    .portrait-caption {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 27px;
+      padding: 15px 18px;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: 15px;
+      background: rgba(8,15,32,.82);
+      backdrop-filter: blur(12px);
     }
 
-    .card p,
-    .project-content p {
+    .portrait-caption strong {
+      display: block;
+      font: 800 1rem "Manrope", sans-serif;
+    }
+
+    .portrait-caption span {
+      color: var(--gold-light);
+      font-size: .75rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold-light);
+      font: 800 1.1rem "Manrope", sans-serif;
+    }
+
+    .stat span {
       color: var(--muted);
-      font-size: .91rem;
+      font-size: .75rem;
     }
 
-    /* ABOUT */
+    /* SHARED CARDS */
 
-    .about-layout {
+    .soft-panel {
+      background: linear-gradient(145deg, rgba(17,29,51,.96), rgba(12,23,42,.96));
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 48px;
+      align-items: start;
     }
 
-    .about-copy h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 20px;
+    .about-card {
+      padding: 30px;
+    }
+
+    .about-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 13px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      font-size: .94rem;
     }
 
     .about-copy p {
+      margin: 0 0 16px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .pillar {
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .pillar b {
+      display: block;
+      color: var(--gold-light);
+      margin-bottom: 5px;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .pillar span {
       color: var(--muted);
-      margin-bottom: 17px;
-    }
-
-    .about-panel {
-      background: linear-gradient(145deg, var(--panel), #0D1A30);
-      padding: 35px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-    }
-
-    .about-panel h3 {
-      color: var(--gold);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-    .about-point {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(214,173,85,.14);
-      color: var(--muted);
-    }
-
-    .about-point:last-child {
-      border-bottom: none;
-    }
-
-    .about-point strong {
-      color: var(--white);
+      font-size: .8rem;
     }
 
     /* PROFESSIONAL TITLES */
 
-    .title-card {
-      padding: 28px;
-      text-align: center;
+    .title-grid,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
     }
 
-    .title-card .symbol {
-      font-size: 2rem;
-      color: var(--gold);
-      margin-bottom: 15px;
+    .info-card {
+      padding: 24px;
+      transition: transform .25s, border-color .25s;
     }
 
-    .title-card h3 {
-      font-size: 1.12rem;
+    .info-card:hover,
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(214,173,85,.42);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      color: var(--gold-light);
+      background: rgba(214,173,85,.1);
+      border: 1px solid rgba(214,173,85,.2);
+      margin-bottom: 17px;
+      font-size: 1.15rem;
+    }
+
+    .info-card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: .83rem;
     }
 
     /* SKILLS */
 
     .skill-card {
-      padding: 28px;
+      padding: 25px;
     }
 
     .skill-card h3 {
-      color: var(--gold);
-      margin-bottom: 18px;
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+      color: var(--gold-light);
     }
 
     .skill-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      gap: 8px;
     }
 
     .skill-list span {
-      background: rgba(37,133,232,.10);
-      border: 1px solid rgba(37,133,232,.25);
-      color: var(--white);
-      padding: 8px 12px;
-      border-radius: 30px;
-      font-size: .78rem;
+      color: #D9E2F0;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.07);
+      padding: 6px 9px;
+      border-radius: 8px;
+      font-size: .75rem;
     }
 
-    /* APPROACH */
+    /* PROJECT APPROACH */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
 
     .approach-card {
-      padding: 28px;
+      padding: 23px;
     }
 
-    .approach-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+    .approach-card .number {
       color: var(--gold);
-      margin-bottom: 12px;
+      font: 800 1.7rem "Manrope", sans-serif;
     }
 
-    /* PROJECTS */
+    .approach-card h3 {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .approach-card p {
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    /* FEATURED PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      transition: transform .25s, border-color .25s;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .project-image-link {
+      display: block;
+      overflow: hidden;
+      background: #0D1729;
+    }
 
     .project-image {
       width: 100%;
-      aspect-ratio: 16/10;
-      overflow: hidden;
-      background: var(--panel-light);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-image img {
-      display: block;
-      width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
-      object-position: center;
       transition: transform .45s ease;
     }
 
-    .project-card:hover .project-image img {
+    .project-image-link:hover .project-image {
       transform: scale(1.045);
     }
 
-    .project-category {
-      display: inline-block;
-      color: var(--gold);
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-meta {
+      color: var(--gold-light);
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: .67rem;
-      font-weight: 800;
-      margin-bottom: 10px;
+      letter-spacing: .13em;
+      font-size: .66rem;
+      font-weight: 700;
     }
 
     .project-content h3 {
-      min-height: 52px;
+      font-size: 1.25rem;
+      margin: 8px 0 10px;
     }
 
     .project-content p {
-      margin-bottom: 15px;
-    }
-
-    .project-link {
-      display: inline-block;
-      color: var(--gold);
-      font-size: .82rem;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-
-    .project-link:hover {
-      color: var(--gold-light);
-      text-decoration: underline;
-    }
-
-    .project-file {
-      display: block;
       color: var(--muted);
-      font-size: .73rem;
-      overflow-wrap: anywhere;
-      margin-top: 10px;
+      font-size: .86rem;
     }
 
-    .project-placeholder {
-      height: 100%;
-      min-height: 190px;
+    .project-tags {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 10px;
-      color: var(--gold);
-      background:
-        radial-gradient(circle at center, rgba(37,133,232,.13), transparent 60%),
-        var(--panel);
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 17px;
     }
 
-    .project-placeholder span {
-      font-size: 2.7rem;
-    }
-
-    .project-placeholder small {
-      color: var(--muted);
-      font-size: .72rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* GALLERY */
-
-    .gallery-intro {
-      max-width: 760px;
-      margin: -25px auto 35px;
-      text-align: center;
-      color: var(--muted);
-      font-size: .9rem;
+    .project-tags span {
+      font-size: .68rem;
+      color: #D8E2F0;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      padding: 5px 9px;
     }
 
     /* EDUCATION */
 
-    .timeline {
-      max-width: 850px;
-      margin: auto;
-      border-left: 2px solid var(--gold);
-      padding-left: 30px;
+    .training-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
 
-    .timeline-item {
-      position: relative;
-      padding: 0 0 35px;
+    .training-card {
+      padding: 25px;
     }
 
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -38px;
-      top: 7px;
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(214,173,85,.13);
+    .training-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 7px;
     }
 
-    .timeline-item h3 {
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 5px;
-    }
-
-    .timeline-item .date {
-      color: var(--gold);
-      font-size: .82rem;
-      font-weight: 800;
-      margin-bottom: 9px;
-    }
-
-    .timeline-item p {
-      color: var(--muted);
-      font-size: .91rem;
-    }
-
-    /* TOOLS */
-
-    .tools-panel {
-      padding: 35px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      text-align: center;
-    }
-
-    .tools-panel p {
-      color: var(--muted);
-      margin-bottom: 23px;
-    }
-
-    .tool-tags {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .tool-tags span {
-      padding: 10px 17px;
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      border-radius: 30px;
+    .training-card .date {
       color: var(--gold-light);
-      font-size: .82rem;
+      font-size: .75rem;
+      font-weight: 700;
     }
 
-    /* VISION */
-
-    .vision {
-      background:
-        linear-gradient(rgba(8,15,32,.93), rgba(8,15,32,.96)),
-        radial-gradient(circle at center, rgba(37,133,232,.3), transparent 60%);
-      text-align: center;
-    }
-
-    .vision h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      margin-bottom: 20px;
-    }
-
-    .vision p {
-      max-width: 760px;
-      margin: auto;
+    .training-card p {
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: .85rem;
+      margin-top: 10px;
     }
 
     /* RESOURCES */
 
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
     .resource-card {
-      padding: 30px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .resource-card .card-icon {
+      margin: 0;
+      flex: 0 0 auto;
     }
 
     .resource-card h3 {
-      color: var(--gold);
-      margin-bottom: 13px;
+      font-size: .95rem;
     }
 
     .resource-card p {
-      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    .resource-card a {
+      color: var(--gold-light);
+      font-size: .8rem;
+      font-weight: 700;
     }
 
     /* CONTACT */
 
-    .contact-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 35px;
-    }
-
     .contact-panel {
-      padding: 32px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      padding: clamp(28px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(37,133,232,.17), transparent 20rem),
+        linear-gradient(140deg, #14233D, #0D172A);
     }
 
-    .contact-panel h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 17px;
+    .contact-panel h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0;
     }
 
     .contact-panel p {
       color: var(--muted);
-      margin-bottom: 17px;
     }
 
-    .contact-item {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(214,173,85,.14);
+    .contact-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      padding: 13px 15px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 12px;
+      color: #E4EAF4;
+      font-size: .86rem;
       overflow-wrap: anywhere;
     }
 
-    .contact-item strong {
-      display: block;
-      color: var(--gold);
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .contact-item a {
-      color: var(--white);
-      font-size: .91rem;
-    }
-
-    .contact-item a:hover {
-      color: var(--gold);
-    }
-
-    .contact-note {
-      background: rgba(37,133,232,.08);
-      border: 1px solid rgba(37,133,232,.22);
-      padding: 22px;
-      border-radius: 14px;
-      color: var(--muted);
-      margin-top: 20px;
-      font-size: .87rem;
+    .contact-links a:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
     }
 
     /* FOOTER */
 
     footer {
-      background: #050A15;
-      border-top: 1px solid var(--border);
-      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding: 27px 0;
+      color: var(--muted);
+      font-size: .78rem;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .footer-brand {
-      color: var(--gold);
-      font-size: 1.3rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .footer-inner p {
-      color: var(--muted);
-      font-size: .8rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-links a {
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold);
+      color: var(--white);
+      font: 800 1rem "Manrope", sans-serif;
     }
 
     .back-top {
@@ -816,27 +743,36 @@
       bottom: 22px;
       width: 44px;
       height: 44px;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      border: none;
+      border: 1px solid rgba(214,173,85,.5);
       border-radius: 50%;
-      background: var(--gold);
-      color: var(--bg);
-      font-size: 1.2rem;
-      font-weight: 800;
+      background: #14233D;
+      color: var(--gold-light);
       cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s;
       z-index: 900;
-      box-shadow: var(--shadow);
     }
 
     .back-top.visible {
-      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
     }
 
     /* RESPONSIVE DESIGN */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 980px) {
       .nav-links {
         gap: 13px;
       }
@@ -846,124 +782,152 @@
       }
 
       .brand-titles {
-        display: none;
+        max-width: 250px;
       }
 
-      .brand-divider {
-        display: none;
-      }
-    }
-
-    @media (max-width: 850px) {
-      .hero-content,
-      .about-layout,
-      .contact-layout {
-        grid-template-columns: 1fr;
+      .hero-grid {
+        gap: 35px;
       }
 
-      .hero-content {
-        text-align: center;
-        gap: 40px;
-      }
-
-      .hero-copy p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons,
-      .hero-professional-titles {
-        justify-content: center;
-      }
-
-      .hero-portrait-frame {
-        max-width: 330px;
-      }
-
-      .grid {
+      .title-grid,
+      .skills-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .about-panel {
-        max-width: 650px;
+      .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 680px) {
-      .nav-inner {
-        min-height: 75px;
+    @media (max-width: 760px) {
+      .nav-wrap {
+        min-height: 72px;
+      }
+
+      .brand-divider,
+      .brand-titles {
+        display: none;
       }
 
       .menu-toggle {
-        display: block;
+        display: inline-grid;
+        place-items: center;
       }
 
       .nav-links {
         display: none;
         position: absolute;
+        top: 72px;
         left: 0;
         right: 0;
-        top: 75px;
-        background: var(--bg-light);
-        border-bottom: 1px solid var(--border);
-        padding: 20px 5%;
+        padding: 18px 22px 24px;
+        background: rgba(8,15,32,.98);
+        border-bottom: 1px solid var(--line);
         flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
+        align-items: stretch;
+        gap: 0;
       }
 
-      .nav-links.active {
+      .nav-links.open {
         display: flex;
       }
 
-      .nav-links a {
+      .nav-links li a {
+        display: block;
+        padding: 11px 4px;
         font-size: .9rem;
       }
 
-      .section {
-        padding: 75px 0;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
+      .nav-links .nav-cta {
+        display: inline-flex;
+        margin-top: 8px;
       }
 
       .hero {
-        min-height: auto;
+        padding: 54px 0 70px;
       }
 
-      .hero-content {
-        padding: 65px 0;
+      .hero-grid,
+      .about-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        justify-self: center;
+        max-width: 390px;
+        grid-row: 1;
+      }
+
+      .hero-copy {
+        grid-row: 2;
       }
 
       .hero-copy h1 {
-        font-size: 2.7rem;
+        font-size: clamp(2.55rem, 12vw, 4rem);
       }
 
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
+      .section {
+        padding: 76px 0;
       }
 
-      .footer-links {
-        justify-content: center;
+      .projects-grid,
+      .training-grid {
+        grid-template-columns: 1fr;
       }
 
-      .timeline {
-        padding-left: 23px;
+      .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 30px, 1160px);
       }
 
-      .timeline-item::before {
-        left: -31px;
+      .title-grid,
+      .skills-grid,
+      .approach-grid,
+      .pillars,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        gap: 18px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .project-content {
+        padding: 20px;
+      }
+
+      .portrait-caption {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *,
       *::before,
       *::after {
-        scroll-behavior: auto !important;
         transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
   </style>
@@ -972,150 +936,187 @@
 <body>
 
   <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="container nav-inner">
+  <header class="site-header">
+    <div class="container nav-wrap">
 
       <div class="brand-lockup">
-        <a href="#home" class="logo">ESTY<span>SMART</span>.</a>
+        <a class="logo" href="#home" aria-label="EstySmart home">
+          ESTY<span>SMART.</span>
+        </a>
 
         <span class="brand-divider" aria-hidden="true"></span>
 
-        <div class="brand-titles">
-          <strong>DATA ANALYST</strong> · MULTIMEDIA SPECIALIST
-          <small>CYBERSECURITY & DEVSECOPS ENTHUSIAST · DIGITAL SOLUTIONS CREATOR</small>
+        <div class="brand-titles" aria-label="Professional titles">
+          <strong>DATA ANALYST · MULTIMEDIA SPECIALIST</strong>
+          <span>CYBERSECURITY &amp; DEVSECOPS ENTHUSIAST</span>
+          <span>DIGITAL SOLUTIONS CREATOR</span>
         </div>
       </div>
 
       <button class="menu-toggle" id="menuToggle"
-              aria-label="Open navigation menu"
-              aria-expanded="false"
-              aria-controls="navLinks">
+        aria-label="Open navigation menu" aria-expanded="false">
         ☰
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#titles">Titles</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
-      </ul>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#titles">Titles</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li>
+            <a class="btn btn-primary nav-cta" href="#contact">
+              Let's Connect
+            </a>
+          </li>
+        </ul>
+      </nav>
 
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
-      <div class="container hero-content">
+      <div class="container hero-grid">
 
-        <div class="hero-copy">
-          <p class="eyebrow">WELCOME TO MY DIGITAL SPACE</p>
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Welcome to my digital space</span>
 
           <h1>
-            Esther Isioma
-            <span class="gold-text">Abiazie</span>
+            I'm <span class="gradient-text">Esther Isioma</span>
+            <span>Abiazie.</span>
           </h1>
 
-          <h2>Known as EstySmart</h2>
-
-          <p class="hero-tagline">
-            CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.
+          <p class="lead">
+            A creative, analytical and technology-driven aspiring digital
+            professional exploring the intersection of data, multimedia,
+            emerging technology and digital innovation.
           </p>
 
-          <p>
-            I am an aspiring digital professional exploring the intersection
-            of data, multimedia creativity, emerging technologies and digital
-            innovation. Through independent projects, continuous learning and
-            creative experimentation, I develop ideas into meaningful digital
-            experiences.
-          </p>
-
-          <div class="hero-professional-titles">
-            <span class="title-chip">Data Analyst</span>
-            <span class="title-chip">Multimedia Specialist</span>
-            <span class="title-chip">Cybersecurity Enthusiast</span>
-            <span class="title-chip">DevSecOps Enthusiast</span>
-            <span class="title-chip">Digital Solutions Creator</span>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              Explore My Projects ↗
+            </a>
+            <a class="btn btn-outline" href="#contact">
+              Connect With Me
+            </a>
           </div>
 
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
-            <a href="#contact" class="btn btn-outline">Connect With Me</a>
+          <div class="title-chips">
+            <span class="chip">Data Analyst</span>
+            <span class="chip">Multimedia Specialist</span>
+            <span class="chip">Cybersecurity Enthusiast</span>
+            <span class="chip">DevSecOps Enthusiast</span>
+            <span class="chip">Digital Solutions Creator</span>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>DATA</strong>
+              <span>Insight &amp; interpretation</span>
+            </div>
+            <div class="stat">
+              <strong>DESIGN</strong>
+              <span>Visual communication</span>
+            </div>
+            <div class="stat">
+              <strong>TECH</strong>
+              <span>Digital exploration</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-portrait-frame">
-          <img
-            class="hero-portrait"
-            src="https://github.com/EstySmart/estysmart.github.io/blob/main/estysmart-original-portrait.jpg?raw=true"
-            alt="Esther Isioma Abiazie — EstySmart"
-            fetchpriority="high">
+        <div class="hero-visual reveal">
+          <div class="portrait-glow"></div>
+
+          <div class="hero-portrait-frame">
+            <img
+              src="https://github.com/EstySmart/estysmart.github.io/blob/main/EstySmart_Profile_Under_1MB.jpg?raw=true"
+              alt="Esther Isioma Abiazie — EstySmart"
+              class="hero-portrait"
+              loading="eager"
+            >
+
+            <div class="portrait-caption">
+              <strong>Esther Isioma Abiazie</strong>
+              <span>Creativity. Technology. Innovation. Impact.</span>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section class="section" id="about">
-      <div class="container about-layout">
+      <div class="container about-grid">
 
-        <div class="about-copy">
-          <p class="eyebrow">THE PERSON BEHIND THE BRAND</p>
+        <div class="section-heading reveal">
+          <span class="eyebrow">About EstySmart</span>
 
           <h2>
-            About <span class="gold-text">EstySmart</span>
+            Curiosity shaped by
+            <span class="gradient-text">creativity and technology.</span>
           </h2>
 
           <p>
-            I am Esther Isioma Abiazie, an aspiring digital professional
-            with interests spanning data analysis, multimedia design,
-            digital development, artificial intelligence and emerging
-            technology.
+            Building a versatile foundation across analytical thinking,
+            visual communication and digital tools.
           </p>
 
-          <p>
-            My learning journey combines analytical thinking with visual
-            creativity. I enjoy exploring how information can be interpreted,
-            how ideas can be communicated through design, and how technology
-            can support practical digital solutions.
-          </p>
-
-          <p>
-            My portfolio brings together independent projects, educational
-            work, creative experiments and developing technical interests.
-            Each project represents an opportunity to learn, build and
-            communicate ideas more effectively.
-          </p>
-
-          <a href="#projects" class="btn btn-outline">Discover My Work</a>
+          <div class="about-card soft-panel" style="margin-top:25px">
+            <h3 class="gold-text">My guiding idea</h3>
+            <p>
+              Use creativity to communicate, data to understand, and
+              technology to develop meaningful digital experiences.
+            </p>
+          </div>
         </div>
 
-        <div class="about-panel">
-          <h3>My Professional Direction</h3>
+        <div class="about-copy reveal">
+          <p>
+            I am Esther Isioma Abiazie, known professionally as
+            <strong class="gold-text">EstySmart</strong>. I am an aspiring
+            digital professional with interests spanning data analysis,
+            multimedia design, digital development and emerging technology.
+          </p>
 
-          <div class="about-point">
-            <strong>Analytical Thinking</strong><br>
-            Exploring data, interpretation, documentation and presentation.
-          </div>
+          <p>
+            My learning and independent projects allow me to explore how
+            information can be organised, how ideas can be communicated
+            visually, and how digital tools can support practical solutions.
+          </p>
 
-          <div class="about-point">
-            <strong>Creative Communication</strong><br>
-            Developing visual content, multimedia concepts and digital designs.
-          </div>
+          <p>
+            This portfolio brings together selected project work, learning
+            experiences and areas of professional interest. It is a growing
+            record of my development, creativity and commitment to
+            continuous learning.
+          </p>
 
-          <div class="about-point">
-            <strong>Digital Development</strong><br>
-            Exploring web technologies, AI-assisted creation and digital tools.
-          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <b>Analytical Thinking</b>
+              <span>Making information clearer and more useful.</span>
+            </div>
 
-          <div class="about-point">
-            <strong>Emerging Technology</strong><br>
-            Building foundational knowledge of cybersecurity and DevSecOps.
+            <div class="pillar">
+              <b>Visual Communication</b>
+              <span>Turning concepts into engaging designs.</span>
+            </div>
+
+            <div class="pillar">
+              <b>Digital Exploration</b>
+              <span>Learning tools, platforms and workflows.</span>
+            </div>
+
+            <div class="pillar">
+              <b>Continuous Growth</b>
+              <span>Developing skills through practice.</span>
+            </div>
           </div>
         </div>
 
@@ -1123,48 +1124,63 @@
     </section>
 
     <!-- PROFESSIONAL TITLES -->
-    <section class="section section-alt" id="titles">
+    <section class="section" id="titles">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">PROFESSIONAL IDENTITY</p>
-          <h2>My Professional <span class="gold-text">Titles</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">Professional identity</span>
+          <h2>My professional <span class="gradient-text">titles.</span></h2>
           <p>
-            The professional directions and areas of interest represented
-            by the EstySmart brand.
+            A multidisciplinary direction bringing together analysis,
+            creative production and technology-focused learning.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="title-grid">
 
-          <article class="card title-card">
-            <div class="symbol">◈</div>
+          <article class="info-card soft-panel reveal">
+            <div class="card-icon">▥</div>
             <h3>Data Analyst</h3>
-            <p>Data exploration, interpretation, analytical thinking and presentation.</p>
+            <p>
+              Interested in organising, interpreting and presenting
+              information to support clearer understanding and decisions.
+            </p>
           </article>
 
-          <article class="card title-card">
-            <div class="symbol">✧</div>
+          <article class="info-card soft-panel reveal">
+            <div class="card-icon">✦</div>
             <h3>Multimedia Specialist</h3>
-            <p>Visual communication, digital graphics, multimedia and creative content.</p>
+            <p>
+              Exploring visual design, multimedia content and AI-assisted
+              creative production across digital formats.
+            </p>
           </article>
 
-          <article class="card title-card">
-            <div class="symbol">⬡</div>
+          <article class="info-card soft-panel reveal">
+            <div class="card-icon">⌁</div>
             <h3>Cybersecurity Enthusiast</h3>
-            <p>Developing foundational knowledge of digital security and cyber awareness.</p>
+            <p>
+              Building foundational awareness of cybersecurity concepts,
+              digital safety and responsible technology use.
+            </p>
           </article>
 
-          <article class="card title-card">
-            <div class="symbol">⌘</div>
+          <article class="info-card soft-panel reveal">
+            <div class="card-icon">⛨</div>
             <h3>DevSecOps Enthusiast</h3>
-            <p>Exploring the relationship between development, security and operations.</p>
+            <p>
+              Learning how security awareness can be integrated into
+              development and operational workflows.
+            </p>
           </article>
 
-          <article class="card title-card">
-            <div class="symbol">✦</div>
+          <article class="info-card soft-panel reveal">
+            <div class="card-icon">◇</div>
             <h3>Digital Solutions Creator</h3>
-            <p>Combining creativity and technology to develop digital concepts and experiences.</p>
+            <p>
+              Combining creative thinking and digital tools to shape useful
+              websites, content and project experiences.
+            </p>
           </article>
 
         </div>
@@ -1175,81 +1191,79 @@
     <section class="section" id="skills">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">CAPABILITIES & KNOWLEDGE</p>
-          <h2>Skills & <span class="gold-text">Expertise</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">Skills &amp; expertise</span>
+          <h2>
+            A growing toolkit for
+            <span class="gradient-text">digital impact.</span>
+          </h2>
           <p>
-            A developing combination of technical, analytical,
-            creative and digital communication skills.
+            Skills and areas of learning developed through training,
+            guided practice and independent projects.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="skills-grid">
 
-          <article class="card skill-card">
-            <h3>Data & Analytics</h3>
+          <article class="skill-card soft-panel reveal">
+            <h3>Data &amp; Analytics</h3>
             <div class="skill-list">
               <span>Data Analysis</span>
               <span>Data Interpretation</span>
               <span>Analytical Thinking</span>
               <span>Data Presentation</span>
               <span>Data Storytelling</span>
-              <span>Business Documentation</span>
             </div>
           </article>
 
-          <article class="card skill-card">
-            <h3>Multimedia & Visual Design</h3>
+          <article class="skill-card soft-panel reveal">
+            <h3>Multimedia &amp; Visual Design</h3>
             <div class="skill-list">
               <span>Graphic Design</span>
               <span>Visual Design</span>
               <span>Multimedia Design</span>
-              <span>Flyer Design</span>
-              <span>Content Creation</span>
+              <span>Presentation Design</span>
               <span>AI Video Creation</span>
             </div>
           </article>
 
-          <article class="card skill-card">
+          <article class="skill-card soft-panel reveal">
             <h3>Digital Development</h3>
             <div class="skill-list">
               <span>Web Development Fundamentals</span>
-              <span>Website Design</span>
-              <span>AI Website Building</span>
+              <span>Website Building</span>
               <span>Application Concepts</span>
-              <span>Digital Solutions</span>
+              <span>Digital Documentation</span>
             </div>
           </article>
 
-          <article class="card skill-card">
+          <article class="skill-card soft-panel reveal">
             <h3>Artificial Intelligence</h3>
             <div class="skill-list">
-              <span>AI Prompt Engineering</span>
-              <span>AI-Assisted Design</span>
+              <span>Prompt Engineering</span>
+              <span>AI-assisted Graphics</span>
               <span>AI Content Creation</span>
-              <span>AI Video Creation</span>
-              <span>AI Website Building</span>
+              <span>AI Video Workflows</span>
             </div>
           </article>
 
-          <article class="card skill-card">
-            <h3>Business & Digital Communication</h3>
+          <article class="skill-card soft-panel reveal">
+            <h3>Business &amp; Communication</h3>
             <div class="skill-list">
               <span>Digital Advertising</span>
               <span>Copywriting</span>
               <span>Content Development</span>
               <span>Microsoft Word</span>
               <span>Microsoft PowerPoint</span>
-              <span>Digital Documentation</span>
             </div>
           </article>
 
-          <article class="card skill-card">
-            <h3>Cybersecurity & Emerging Technology</h3>
+          <article class="skill-card soft-panel reveal">
+            <h3>Emerging Technology</h3>
             <div class="skill-list">
               <span>Cybersecurity Fundamentals</span>
               <span>DevSecOps Principles</span>
-              <span>Digital Security Awareness</span>
+              <span>Digital Safety Awareness</span>
               <span>Technology Research</span>
             </div>
           </article>
@@ -1258,128 +1272,46 @@
       </div>
     </section>
 
-    <!-- ADDITIONAL PROFESSIONAL ROLES -->
-    <section class="section section-alt" id="roles">
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="eyebrow">CREATIVE & TECHNICAL INTERESTS</p>
-          <h2>Additional Professional <span class="gold-text">Areas</span></h2>
-          <p>
-            Complementary disciplines that support my wider digital
-            and creative development.
-          </p>
-        </div>
-
-        <div class="grid">
-
-          <article class="card title-card">
-            <div class="symbol">✧</div>
-            <h3>Graphic Designer</h3>
-            <p>Visual concepts and digital graphics.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">◈</div>
-            <h3>Visual Designer</h3>
-            <p>Visual presentation and design communication.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">⌘</div>
-            <h3>Web Development Enthusiast</h3>
-            <p>Website structure and digital experiences.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">✦</div>
-            <h3>AI Prompt Engineer</h3>
-            <p>Prompt development and AI-assisted workflows.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">◎</div>
-            <h3>AI Content Creator</h3>
-            <p>AI-assisted multimedia and digital content.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">◇</div>
-            <h3>Digital Advertising Specialist</h3>
-            <p>Creative advertising concepts and digital promotion.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">▤</div>
-            <h3>Data Presentation</h3>
-            <p>Organising and communicating information visually.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">✎</div>
-            <h3>Copywriting & Content Development</h3>
-            <p>Written communication and content development.</p>
-          </article>
-
-          <article class="card title-card">
-            <div class="symbol">▧</div>
-            <h3>Digital Documentation</h3>
-            <p>Structured documents and professional presentations.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
+    <!-- PROJECT APPROACH -->
     <section class="section" id="approach">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">MY WORKING PHILOSOPHY</p>
-          <h2>The EstySmart <span class="gold-text">Approach</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">How I approach projects</span>
+          <h2>
+            From an idea to a
+            <span class="gradient-text">clear outcome.</span>
+          </h2>
           <p>
-            A learning-driven approach to creativity, technology
-            and practical digital development.
+            A thoughtful process that helps keep each project focused,
+            organised and audience-aware.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="approach-grid">
 
-          <article class="card approach-card">
-            <div class="approach-number">01</div>
+          <article class="approach-card soft-panel reveal">
+            <div class="number">01</div>
             <h3>Understand</h3>
-            <p>Explore the objective, identify the problem and understand the audience.</p>
+            <p>Identify the purpose, audience and core message.</p>
           </article>
 
-          <article class="card approach-card">
-            <div class="approach-number">02</div>
-            <h3>Conceptualise</h3>
-            <p>Develop ideas through research, analysis and creative thinking.</p>
+          <article class="approach-card soft-panel reveal">
+            <div class="number">02</div>
+            <h3>Research</h3>
+            <p>Gather relevant information and explore suitable approaches.</p>
           </article>
 
-          <article class="card approach-card">
-            <div class="approach-number">03</div>
+          <article class="approach-card soft-panel reveal">
+            <div class="number">03</div>
             <h3>Create</h3>
-            <p>Transform ideas into digital concepts, visual assets and project outputs.</p>
+            <p>Develop the visual, analytical or digital project components.</p>
           </article>
 
-          <article class="card approach-card">
-            <div class="approach-number">04</div>
+          <article class="approach-card soft-panel reveal">
+            <div class="number">04</div>
             <h3>Refine</h3>
-            <p>Review the work, improve presentation and pay attention to detail.</p>
-          </article>
-
-          <article class="card approach-card">
-            <div class="approach-number">05</div>
-            <h3>Learn</h3>
-            <p>Use every project as an opportunity to develop new knowledge and skills.</p>
-          </article>
-
-          <article class="card approach-card">
-            <div class="approach-number">06</div>
-            <h3>Innovate</h3>
-            <p>Explore better ways to combine technology, information and creativity.</p>
+            <p>Review clarity, consistency, usability and presentation.</p>
           </article>
 
         </div>
@@ -1387,154 +1319,180 @@
     </section>
 
     <!-- FEATURED PROJECTS -->
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">SELECTED PORTFOLIO WORK</p>
-          <h2>Featured <span class="gold-text">Projects</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2>Featured <span class="gradient-text">projects.</span></h2>
           <p>
-            A selection of independent concepts, educational publications,
-            creative work and digital projects.
+            A selection of independent concepts, educational publications
+            and creative project work. These examples reflect learning,
+            experimentation and practical application.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="projects-grid">
 
           <!-- ABI-JO AUTOMOBILES -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/Abi-Jo%20Automobiles%20Luxury%20Showcase.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/Abi-Jo%20Automobiles%20Luxury%20Showcase.png?raw=true"
-                  alt="ABI-JO Automobiles Luxury Showcase"
-                  loading="lazy">
-              </div>
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/Abi-Jo%20Automobiles%20Luxury%20Showcase.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/Abi-Jo%20Automobiles%20Luxury%20Showcase.png?raw=true"
+                alt="ABI-JO Automobiles luxury showcase"
+                loading="lazy">
             </a>
 
             <div class="project-content">
-              <span class="project-category">Web Design & Automotive</span>
+              <span class="project-meta">Website concept · Automotive</span>
               <h3>ABI-JO Automobiles</h3>
               <p>
-                An automotive website concept designed to present luxury
-                vehicles and automotive services through a polished
-                digital showcase.
+                A luxury automotive website concept designed to present
+                vehicle offerings through a polished digital showcase
+                and clear visual hierarchy.
               </p>
-              <a class="project-link"
-                 href="https://abi-joautomobiles.lovable.app/"
-                 target="_blank" rel="noopener noreferrer">
-                Explore Website ↗
-              </a>
-              <small class="project-file">
-                Image file: Abi-Jo Automobiles Luxury Showcase.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/Abi-Jo%20Automobiles%20Luxury%20Showcase.png"
-                 target="_blank" rel="noopener noreferrer">
-                View Original Image File ↗
-              </a>
+              <div class="project-tags">
+                <span>Website Concept</span>
+                <span>Visual Design</span>
+                <span>Automotive</span>
+              </div>
             </div>
           </article>
 
           <!-- ISSY ARTS AND DESIGN -->
-          <article class="card project-card">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <span>✧</span>
-                <small>Visual Design Project</small>
-              </div>
-            </div>
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png?raw=true"
+                alt="Issy Arts and Design project artwork"
+                loading="lazy">
+            </a>
 
             <div class="project-content">
-              <span class="project-category">Branding & Visual Design</span>
+              <span class="project-meta">Branding · Visual design</span>
               <h3>Issy Arts and Design</h3>
               <p>
-                An independent creative concept exploring visual identity,
-                graphic presentation and design communication.
+                A creative branding and visual-design concept exploring
+                presentation, style and a cohesive identity for a
+                design-focused brand.
               </p>
+              <div class="project-tags">
+                <span>Graphic Design</span>
+                <span>Brand Identity</span>
+                <span>Creative Direction</span>
+              </div>
             </div>
           </article>
 
-          <!-- HECKYBABA -->
-          <article class="card project-card">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <span>◈</span>
-                <small>Multimedia Project</small>
-              </div>
-            </div>
+          <!-- HECKYBABA REAL ESTATE -->
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png?raw=true"
+                alt="HeckyBaba Real Estate Unlimited luxury property branding thumbnail"
+                loading="lazy">
+            </a>
 
             <div class="project-content">
-              <span class="project-category">AI-Assisted Multimedia</span>
+              <span class="project-meta">Real estate · Branding</span>
               <h3>HeckyBaba Real Estate Unlimited</h3>
               <p>
-                An AI-assisted promotional video project exploring
-                multimedia storytelling and real estate communication.
+                A real-estate promotional branding concept featuring
+                a luxury property visual, business identity and a
+                clear marketing presentation.
               </p>
+              <div class="project-tags">
+                <span>Real Estate</span>
+                <span>Promotional Design</span>
+                <span>Visual Branding</span>
+              </div>
             </div>
           </article>
 
           <!-- DATA STORYTELLING -->
-          <article class="card project-card">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <span>▤</span>
-                <small>Data & Documentation</small>
-              </div>
-            </div>
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/Data%20Storytelling%20%26%20Documentation.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/Data%20Storytelling%20%26%20Documentation.png?raw=true"
+                alt="Data Storytelling and Business Documentation project visual"
+                loading="lazy">
+            </a>
 
             <div class="project-content">
-              <span class="project-category">Analytics & Communication</span>
-              <h3>Data Storytelling & Business Documentation</h3>
+              <span class="project-meta">Analytics · Documentation</span>
+              <h3>Data Storytelling &amp; Business Documentation</h3>
               <p>
-                A project exploring the presentation of information,
-                data interpretation, structured documentation and
-                business communication.
+                A project exploring how data insights and business
+                information can be organised into clear, structured
+                and visually engaging documentation.
               </p>
-            </div>
-          </article>
-
-          <!-- MICROSCOPIC MARVELS -->
-          <article class="card project-card">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <span>◎</span>
-                <small>Educational Publication</small>
+              <div class="project-tags">
+                <span>Data Storytelling</span>
+                <span>Business Documentation</span>
+                <span>Data Presentation</span>
               </div>
-            </div>
-
-            <div class="project-content">
-              <span class="project-category">Educational Ebook</span>
-              <h3>Microscopic Marvels</h3>
-              <p>
-                An educational ebook titled
-                <em>The Hidden Universe Beneath the Microscope</em>,
-                introducing microscopic science and the unseen world
-                around us.
-              </p>
-              <p><strong>Author:</strong> Esther Isioma Abiazie</p>
             </div>
           </article>
 
           <!-- DRIVEN BY INNOVATION -->
-          <article class="card project-card">
-            <div class="project-image">
-              <div class="project-placeholder">
-                <span>✦</span>
-                <small>Automotive Publication</small>
-              </div>
-            </div>
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png?raw=true"
+                alt="Driven by Innovation educational ebook cover"
+                loading="lazy">
+            </a>
 
             <div class="project-content">
-              <span class="project-category">Educational Ebook</span>
+              <span class="project-meta">Educational ebook · Technology</span>
               <h3>Driven by Innovation</h3>
               <p>
-                An automotive-focused ebook titled
-                <em>The Technology and Vision Behind the Future of Cars</em>,
-                exploring automotive innovation and emerging technologies.
+                <em>The Technology and Vision Behind the Future of Cars</em>
+                — an educational publication concept exploring automotive
+                technology and future mobility.
               </p>
-              <p><strong>Author:</strong> Abiazie Emmanuel Nduwuba</p>
+              <div class="project-tags">
+                <span>Research</span>
+                <span>Educational Writing</span>
+                <span>Publication Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- MICROSCOPIC MARVELS -->
+          <article class="project-card soft-panel reveal">
+            <a class="project-image-link"
+              href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png?raw=true"
+              target="_blank" rel="noopener noreferrer">
+              <img class="project-image"
+                src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png?raw=true"
+                alt="Microscopic Marvels educational ebook cover"
+                loading="lazy">
+            </a>
+
+            <div class="project-content">
+              <span class="project-meta">Educational ebook · Science</span>
+              <h3>Microscopic Marvels</h3>
+              <p>
+                <em>The Hidden Universe Beneath the Microscope</em>
+                — an educational publication concept introducing
+                microscopic science to learners and curious readers.
+              </p>
+              <div class="project-tags">
+                <span>Science Communication</span>
+                <span>Educational Writing</span>
+                <span>Publication Design</span>
+              </div>
             </div>
           </article>
 
@@ -1542,332 +1500,157 @@
       </div>
     </section>
 
-    <!-- ADDITIONAL CREATIVE & VISUAL WORK -->
-    <section class="section" id="creative-gallery">
+    <!-- EDUCATION AND TRAINING -->
+    <section class="section" id="education">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">ADDITIONAL PORTFOLIO SHOWCASE</p>
-          <h2>Additional <span class="gold-text">Creative & Visual Work</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">Education &amp; training</span>
+          <h2>
+            Learning that supports
+            <span class="gradient-text">growth.</span>
+          </h2>
           <p>
-            A collection of additional visual creations.
-            Each item retains its original filename and links directly
-            to its GitHub image file.
+            Academic education and selected training experiences that
+            contribute to my developing digital skill set.
           </p>
         </div>
 
-        <p class="gallery-intro">
-          Select an image or its file link to view the original
-          image stored in the GitHub repository.
-        </p>
+        <div class="training-grid">
 
-        <div class="grid">
-
-          <!-- APRIL 28 IMAGE -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png?raw=true"
-                  alt="ChatGPT Image Apr 28, 2026, 09_00_25 PM"
-                  loading="lazy">
-              </div>
-            </a>
-            <div class="project-content">
-              <span class="project-category">Creative Visual Work</span>
-              <h3>ChatGPT Image Apr 28, 2026, 09_00_25 PM</h3>
-              <small class="project-file">
-                File: ChatGPT Image Apr 28, 2026, 09_00_25 PM.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub File ↗
-              </a>
-            </div>
-          </article>
-
-          <!-- JULY 10 11:37 IMAGE -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2011_37_38%20AM.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2011_37_38%20AM.png?raw=true"
-                  alt="ChatGPT Image Jul 10, 2026, 11_37_38 AM"
-                  loading="lazy">
-              </div>
-            </a>
-            <div class="project-content">
-              <span class="project-category">Creative Visual Work</span>
-              <h3>ChatGPT Image Jul 10, 2026, 11_37_38 AM</h3>
-              <small class="project-file">
-                File: ChatGPT Image Jul 10, 2026, 11_37_38 AM.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2011_37_38%20AM.png"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub File ↗
-              </a>
-            </div>
-          </article>
-
-          <!-- JULY 10 12:03 IMAGE -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2012_03_48%20PM.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2012_03_48%20PM.png?raw=true"
-                  alt="ChatGPT Image Jul 10, 2026, 12_03_48 PM"
-                  loading="lazy">
-              </div>
-            </a>
-            <div class="project-content">
-              <span class="project-category">Creative Visual Work</span>
-              <h3>ChatGPT Image Jul 10, 2026, 12_03_48 PM</h3>
-              <small class="project-file">
-                File: ChatGPT Image Jul 10, 2026, 12_03_48 PM.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%2010,%202026,%2012_03_48%20PM.png"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub File ↗
-              </a>
-            </div>
-          </article>
-
-          <!-- JULY 5 06:12 IMAGE -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png?raw=true"
-                  alt="ChatGPT Image Jul 5, 2026, 06_12_56 PM"
-                  loading="lazy">
-              </div>
-            </a>
-            <div class="project-content">
-              <span class="project-category">Creative Visual Work</span>
-              <h3>ChatGPT Image Jul 5, 2026, 06_12_56 PM</h3>
-              <small class="project-file">
-                File: ChatGPT Image Jul 5, 2026, 06_12_56 PM.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub File ↗
-              </a>
-            </div>
-          </article>
-
-          <!-- JULY 5 07:09 IMAGE -->
-          <article class="card project-card">
-            <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png?raw=true"
-               target="_blank" rel="noopener noreferrer">
-              <div class="project-image">
-                <img
-                  src="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png?raw=true"
-                  alt="ChatGPT Image Jul 5, 2026, 07_09_50 PM"
-                  loading="lazy">
-              </div>
-            </a>
-            <div class="project-content">
-              <span class="project-category">Creative Visual Work</span>
-              <h3>ChatGPT Image Jul 5, 2026, 07_09_50 PM</h3>
-              <small class="project-file">
-                File: ChatGPT Image Jul 5, 2026, 07_09_50 PM.png
-              </small>
-              <a class="project-link"
-                 href="https://github.com/EstySmart/estysmart.github.io/blob/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png"
-                 target="_blank" rel="noopener noreferrer">
-                View GitHub File ↗
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="eyebrow">ACADEMIC BACKGROUND & LEARNING</p>
-          <h2>Education & <span class="gold-text">Training</span></h2>
-          <p>
-            My academic foundation and selected learning experiences
-            supporting my professional development.
-          </p>
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
+          <article class="training-card soft-panel reveal">
             <h3>St. Agnes Group of School</h3>
-            <div class="date">2026</div>
+            <span class="date">WAEC / WASSCE · 2026</span>
             <p>
-              Secondary education and WAEC/WASSCE academic qualification.
+              Secondary school education, building a foundation in
+              communication, learning and problem-solving.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
+          <article class="training-card soft-panel reveal">
             <h3>Multimedia Specialist Training — ITeach Academy</h3>
-            <div class="date">2026</div>
+            <span class="date">2026</span>
             <p>
-              Training covering AI prompt engineering, AI flyer and graphics
-              creation, AI website and application building, AI video
-              creation and AI content creation.
+              Learning in AI prompt engineering, AI-assisted flyer and
+              graphics creation, website and application building,
+              AI video creation and AI content creation.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <h3>Data Analysis Training</h3>
-            <div class="date">2025 · One-Month Online Programme</div>
+          <article class="training-card soft-panel reveal">
+            <h3>Data Analysis Programme</h3>
+            <span class="date">Online · 2025 · One-month programme</span>
             <p>
-              Online learning experience focused on data analysis and
-              developing analytical understanding.
+              Introductory learning focused on data analysis concepts
+              and the interpretation and presentation of information.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
+          <article class="training-card soft-panel reveal">
             <h3>Microsoft PowerPoint Presentation</h3>
-            <div class="date">July 2025 – August 2025</div>
+            <span class="date">July 2025 – August 2025</span>
             <p>
-              Training in presentation development and communicating
-              information through Microsoft PowerPoint.
+              Training focused on preparing and presenting information
+              through structured slide presentations.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
+          <article class="training-card soft-panel reveal">
             <h3>Microsoft Word Processing — ITeach Academy</h3>
-            <div class="date">2025</div>
+            <span class="date">2025</span>
             <p>
-              Training in word processing, document creation and
-              professional digital documentation.
+              Training in document preparation and word-processing
+              fundamentals.
             </p>
-          </div>
+          </article>
 
         </div>
-      </div>
-    </section>
-
-    <!-- TOOLS -->
-    <section class="section" id="tools">
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="eyebrow">DIGITAL WORKFLOW</p>
-          <h2>Tools & <span class="gold-text">Technology</span></h2>
-          <p>
-            Digital platforms and technologies explored through
-            learning, design and independent project work.
-          </p>
-        </div>
-
-        <div class="tools-panel">
-          <h3>My Digital Toolkit</h3>
-          <p>
-            A growing toolkit supporting creative production,
-            analysis, documentation and digital development.
-          </p>
-
-          <div class="tool-tags">
-            <span>Microsoft Word</span>
-            <span>Microsoft PowerPoint</span>
-            <span>GitHub</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>AI Design Tools</span>
-            <span>AI Video Tools</span>
-            <span>AI Website Builders</span>
-            <span>Prompt Engineering</span>
-            <span>Digital Publishing</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- VISION -->
-    <section class="section vision" id="vision">
-      <div class="container">
-        <p class="eyebrow">THE VISION</p>
-
-        <h2>
-          Building Beyond Ideas.
-          <span class="gold-text">Creating Digital Impact.</span>
-        </h2>
-
-        <p>
-          My vision is to continue developing the knowledge, creativity
-          and technical understanding needed to contribute meaningfully
-          to the digital world. I believe in continuous learning,
-          thoughtful innovation and using technology to communicate
-          ideas and solve practical problems.
-        </p>
       </div>
     </section>
 
     <!-- PROFESSIONAL RESOURCES -->
-    <section class="section section-alt" id="resources">
+    <section class="section" id="resources">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">CAREER DOCUMENTATION & NETWORKS</p>
-          <h2>Professional <span class="gold-text">Resources</span></h2>
+        <div class="section-heading reveal">
+          <span class="eyebrow">Professional resources</span>
+          <h2>Connect with <span class="gradient-text">EstySmart.</span></h2>
           <p>
-            Access my professional profile, career document and
-            online platforms.
+            Explore my professional profile, selected work and contact details.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="resource-grid">
 
-          <article class="card resource-card">
-            <h3>Professional CV</h3>
-            <p>
-              View my professional background, skills, education,
-              training and selected project experience.
-            </p>
-            <a class="btn btn-primary"
-               href="Esther_Isioma_Abiazie_Professional_CV.pdf"
-               target="_blank" rel="noopener noreferrer">
-              View / Download CV ↓
-            </a>
-            <small class="project-file">
-              Required repository file:
-              Esther_Isioma_Abiazie_Professional_CV.pdf
-            </small>
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">▤</div>
+            <div>
+              <h3>Professional CV</h3>
+              <p>View my career profile and skills.</p>
+              <a href="Esther_Isioma_Abiazie_Professional_CV.pdf"
+                target="_blank" rel="noopener noreferrer">
+                View / Download CV ↗
+              </a>
+            </div>
           </article>
 
-          <article class="card resource-card">
-            <h3>LinkedIn Profile</h3>
-            <p>
-              Explore my professional profile, learning journey,
-              skills and career interests.
-            </p>
-            <a class="btn btn-outline"
-               href="https://www.linkedin.com/in/estysmart"
-               target="_blank" rel="noopener noreferrer">
-              Visit LinkedIn ↗
-            </a>
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">in</div>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Professional profile and updates.</p>
+              <a href="https://www.linkedin.com/in/estysmart"
+                target="_blank" rel="noopener noreferrer">
+                Visit LinkedIn ↗
+              </a>
+            </div>
           </article>
 
-          <article class="card resource-card">
-            <h3>Facebook</h3>
-            <p>
-              Connect with my digital presence and creative activities.
-            </p>
-            <a class="btn btn-outline"
-               href="https://web.facebook.com/estysmart18"
-               target="_blank" rel="noopener noreferrer">
-              Visit Facebook ↗
-            </a>
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">f</div>
+            <div>
+              <h3>Facebook</h3>
+              <p>Connect and follow my updates.</p>
+              <a href="https://web.facebook.com/estysmart18"
+                target="_blank" rel="noopener noreferrer">
+                Visit Facebook ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">⌘</div>
+            <div>
+              <h3>GitHub Repository</h3>
+              <p>Explore the website source and project assets.</p>
+              <a href="https://github.com/EstySmart/estysmart.github.io"
+                target="_blank" rel="noopener noreferrer">
+                Visit GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">◉</div>
+            <div>
+              <h3>Portfolio Website</h3>
+              <p>Explore the full online portfolio.</p>
+              <a href="https://estysmart-18.base44.app/"
+                target="_blank" rel="noopener noreferrer">
+                Visit Portfolio ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-card soft-panel reveal">
+            <div class="card-icon">✉</div>
+            <div>
+              <h3>Email</h3>
+              <p>For enquiries and professional conversations.</p>
+              <a href="mailto:isiomaabiazie17@gmail.com">
+                Send an Email ↗
+              </a>
+            </div>
           </article>
 
         </div>
@@ -1878,89 +1661,49 @@
     <section class="section" id="contact">
       <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">LET'S CONNECT & CREATE IMPACT</p>
-          <h2>Get in <span class="gold-text">Touch</span></h2>
-          <p>
-            I welcome appropriate opportunities for learning,
-            collaboration, internships and digital project discussions.
-          </p>
-        </div>
+        <div class="contact-panel soft-panel reveal">
 
-        <div class="contact-layout">
+          <div>
+            <span class="eyebrow">Let's connect</span>
 
-          <div class="contact-panel">
-            <h3>Let's Start a Conversation</h3>
+            <h2>
+              Have an idea? Let's make it
+              <span class="gradient-text">meaningful.</span>
+            </h2>
+
             <p>
-              Have an opportunity, project idea or professional
-              enquiry? Reach out through any of the channels below.
+              I welcome opportunities to learn, collaborate, contribute
+              to creative and digital projects, and connect with people
+              working across technology, design and data.
             </p>
 
-            <div class="contact-item">
-              <strong>Email</strong>
-              <a href="mailto:isiomaabiazie17@gmail.com">
-                isiomaabiazie17@gmail.com
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <strong>LinkedIn</strong>
-              <a href="https://www.linkedin.com/in/estysmart"
-                 target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/estysmart
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Facebook</strong>
-              <a href="https://web.facebook.com/estysmart18"
-                 target="_blank" rel="noopener noreferrer">
-                facebook.com/estysmart18
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Portfolio</strong>
-              <a href="https://estysmart-18.base44.app/"
-                 target="_blank" rel="noopener noreferrer">
-                Visit EstySmart Portfolio ↗
+            <div style="margin-top:25px">
+              <a class="btn btn-primary"
+                href="mailto:isiomaabiazie17@gmail.com">
+                Start a Conversation ↗
               </a>
             </div>
           </div>
 
-          <div class="contact-panel">
-            <h3>Creativity. Technology. Innovation. Impact.</h3>
+          <div class="contact-links">
+            <a href="mailto:isiomaabiazie17@gmail.com">
+              ✉ &nbsp; isiomaabiazie17@gmail.com
+            </a>
 
-            <p>
-              EstySmart represents a growing journey across analytical
-              thinking, multimedia creativity and digital innovation.
-            </p>
+            <a href="https://www.linkedin.com/in/estysmart"
+              target="_blank" rel="noopener noreferrer">
+              in &nbsp; LinkedIn — EstySmart
+            </a>
 
-            <p>
-              I am committed to learning, developing my abilities and
-              exploring opportunities that encourage meaningful growth.
-            </p>
+            <a href="https://web.facebook.com/estysmart18"
+              target="_blank" rel="noopener noreferrer">
+              f &nbsp; Facebook — EstySmart
+            </a>
 
-            <div class="contact-note">
-              <strong class="gold-text">Professional Interests</strong>
-              <br><br>
-              Data analysis · Multimedia design · Visual communication ·
-              Digital development · AI-assisted creation · Cybersecurity
-              fundamentals · DevSecOps principles
-            </div>
-
-            <div class="hero-buttons">
-              <a class="btn btn-primary"
-                 href="mailto:isiomaabiazie17@gmail.com">
-                Send an Email
-              </a>
-
-              <a class="btn btn-outline"
-                 href="https://www.linkedin.com/in/estysmart"
-                 target="_blank" rel="noopener noreferrer">
-                Connect on LinkedIn
-              </a>
-            </div>
+            <a href="https://estysmart-18.base44.app/"
+              target="_blank" rel="noopener noreferrer">
+              ⌘ &nbsp; Base44 Portfolio Website
+            </a>
           </div>
 
         </div>
@@ -1974,47 +1717,41 @@
     <div class="container footer-inner">
 
       <div>
-        <div class="footer-brand">ESTYSMART.</div>
-        <p>Creativity. Technology. Innovation. Impact.</p>
+        <div class="footer-brand">ESTY<span>SMART.</span></div>
+        <div>Creativity. Technology. Innovation. Impact.</div>
       </div>
 
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
+      <div>
+        © <span id="year"></span> Esther Isioma Abiazie.
+        All rights reserved.
       </div>
 
-      <p>
-        © <span id="year"></span> EstySmart. All rights reserved.
-      </p>
+      <div>Designed with purpose and curiosity.</div>
 
     </div>
   </footer>
 
-  <button class="back-top" id="backTop"
-          aria-label="Back to top">
+  <button class="back-top" id="backTop" aria-label="Back to top">
     ↑
   </button>
 
   <!-- JAVASCRIPT -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    (() => {
       const menuToggle = document.getElementById("menuToggle");
       const navLinks = document.getElementById("navLinks");
       const backTop = document.getElementById("backTop");
       const year = document.getElementById("year");
 
-      // Automatically update copyright year
+      // Automatically update the copyright year.
       if (year) {
         year.textContent = new Date().getFullYear();
       }
 
-      // Mobile navigation
+      // Mobile navigation.
       if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-          const isOpen = navLinks.classList.toggle("active");
+        menuToggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("open");
 
           menuToggle.setAttribute("aria-expanded", String(isOpen));
           menuToggle.setAttribute(
@@ -2022,53 +1759,90 @@
             isOpen ? "Close navigation menu" : "Open navigation menu"
           );
 
-          menuToggle.textContent = isOpen ? "✕" : "☰";
+          menuToggle.textContent = isOpen ? "×" : "☰";
         });
 
-        navLinks.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", function () {
-            navLinks.classList.remove("active");
+        // Close the menu after selecting a navigation link.
+        navLinks.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
             menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Open navigation menu");
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
             menuToggle.textContent = "☰";
           });
         });
 
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") {
-            navLinks.classList.remove("active");
+        // Close the menu with Escape.
+        document.addEventListener("keydown", event => {
+          if (
+            event.key === "Escape" &&
+            navLinks.classList.contains("open")
+          ) {
+            navLinks.classList.remove("open");
             menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Open navigation menu");
             menuToggle.textContent = "☰";
           }
         });
 
-        window.addEventListener("resize", function () {
-          if (window.innerWidth > 680) {
-            navLinks.classList.remove("active");
+        // Reset the mobile menu when returning to desktop width.
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 760) {
+            navLinks.classList.remove("open");
             menuToggle.setAttribute("aria-expanded", "false");
             menuToggle.textContent = "☰";
           }
         });
       }
 
-      // Back-to-top button
+      // Back-to-top button.
       if (backTop) {
-        window.addEventListener("scroll", function () {
-          backTop.classList.toggle("visible", window.scrollY > 450);
+        const updateBackTop = () => {
+          backTop.classList.toggle("visible", window.scrollY > 500);
+        };
+
+        window.addEventListener("scroll", updateBackTop, {
+          passive: true
         });
 
-        backTop.addEventListener("click", function () {
-          const prefersReducedMotion = window.matchMedia &&
-            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        updateBackTop();
+
+        backTop.addEventListener("click", () => {
+          const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
 
           window.scrollTo({
             top: 0,
-            behavior: prefersReducedMotion ? "auto" : "smooth"
+            behavior: reduceMotion ? "auto" : "smooth"
           });
         });
       }
-    });
+
+      // Reveal sections as they enter the viewport.
+      const revealItems = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealItems.forEach(item => observer.observe(item));
+      } else {
+        revealItems.forEach(item => {
+          item.classList.add("is-visible");
+        });
+      }
+    })();
   </script>
 
 </body>
