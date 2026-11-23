@@ -5,19 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080F20">
-
-  <title>EstySmart | Esther Isioma Abiazie</title><a href="#home" class="brand">
-  <span class="brand-name">ESTY<span>SMART.</span></span>
-  <span class="brand-divider"></span>
-  <span class="brand-titles">
-    Data Analyst <i>·</i> Multimedia Specialist<br>
-    Cybersecurity & DevSecOps Enthusiast<br>
-    Digital Solutions Creator
-  </span>
-</a>
-
   <meta name="description" content="EstySmart — Esther Isioma Abiazie. Data Analyst, Multimedia Specialist, Cybersecurity and DevSecOps Enthusiast, and Digital Solutions Creator.">
   <meta name="author" content="Esther Isioma Abiazie">
+
+  <title>EstySmart | Esther Isioma Abiazie</title>
 
   <style>
     :root {
@@ -130,28 +121,73 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8,15,32,.94);
+      background: rgba(8,15,32,.96);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
 
     .nav-inner {
-      min-height: 78px;
+      min-height: 86px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
     }
 
-    .logo {
+    /* BRAND AND PROFESSIONAL TITLES */
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-shrink: 0;
+      min-width: 0;
+    }
+
+    .brand-name {
       color: var(--gold);
       font-size: 1.55rem;
       font-weight: 900;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
 
-    .logo span {
+    .brand-name span {
       color: var(--white);
+    }
+
+    .brand-divider {
+      width: 2px;
+      height: 49px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--gold),
+        var(--blue),
+        transparent
+      );
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: var(--muted);
+      font-size: .64rem;
+      line-height: 1.45;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .brand-titles strong {
+      color: var(--gold-light);
+      font-weight: 750;
+    }
+
+    .brand-titles .brand-title-secondary {
+      color: var(--blue-light);
     }
 
     .nav-links {
@@ -312,8 +348,7 @@
       padding: 30px;
       border: 1px solid var(--line);
       border-radius: 24px;
-      background:
-        linear-gradient(145deg, rgba(20,35,61,.97), rgba(8,15,32,.97));
+      background: linear-gradient(145deg, rgba(20,35,61,.97), rgba(8,15,32,.97));
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -949,26 +984,42 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
+      .nav-inner {
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-name {
+        font-size: 1.3rem;
+      }
+
+      .brand-titles {
+        font-size: .57rem;
+      }
+
       .nav-links {
-        gap: 13px;
+        gap: 12px;
       }
 
       .nav-links a {
-        font-size: .74rem;
-      }
-
-      .title-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .hero-layout {
-        grid-template-columns: 1fr .8fr;
-        gap: 28px;
+        font-size: .72rem;
       }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        padding: 13px 0;
+      }
+
+      .brand {
+        flex: 1;
+      }
+
       .menu-toggle {
         display: block;
       }
@@ -976,7 +1027,7 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 78px;
+        top: 100%;
         left: 0;
         right: 0;
         padding: 16px 5%;
@@ -1002,6 +1053,17 @@
         margin-top: 7px;
       }
 
+      .title-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr .8fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 760px) {
       .hero {
         padding: 75px 0 60px;
         min-height: auto;
@@ -1033,6 +1095,25 @@
     }
 
     @media (max-width: 520px) {
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-name {
+        font-size: 1.12rem;
+      }
+
+      .brand-divider {
+        height: 43px;
+      }
+
+      .brand-titles {
+        font-size: .49rem;
+        line-height: 1.5;
+        white-space: normal;
+        max-width: 190px;
+      }
+
       .section {
         padding: 72px 0;
       }
@@ -1099,7 +1180,17 @@
   <header class="navbar">
     <div class="container nav-inner">
 
-      <a href="#home" class="logo">ESTY<span>SMART.</span></a>
+      <a href="#home" class="brand" aria-label="EstySmart home">
+        <span class="brand-name">ESTY<span>SMART.</span></span>
+
+        <span class="brand-divider" aria-hidden="true"></span>
+
+        <span class="brand-titles">
+          <strong>Data Analyst · Multimedia Specialist</strong>
+          <span class="brand-title-secondary">Cybersecurity & DevSecOps Enthusiast</span>
+          <span>Digital Solutions Creator</span>
+        </span>
+      </a>
 
       <button
         class="menu-toggle"
@@ -1132,12 +1223,8 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="container hero-layout">
-
         <div class="reveal">
-
-          <div class="hero-label">
-            ESTYSMART · DIGITAL PORTFOLIO
-          </div>
+          <div class="hero-label">ESTYSMART · DIGITAL PORTFOLIO</div>
 
           <h1>
             Creativity.<br>
@@ -1170,25 +1257,16 @@
           <p class="hero-tagline">
             CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.
           </p>
-
         </div>
 
         <aside class="hero-identity reveal">
-
           <div class="identity-monogram">ES</div>
-
           <h2>Esther Isioma Abiazie</h2>
-
-          <p>
-            Digital Creativity · Analytical Thinking · Technology
-          </p>
+          <p>Digital Creativity · Analytical Thinking · Technology</p>
 
           <div class="identity-divider"></div>
 
-          <div class="identity-mini-title">
-            PROFESSIONAL IDENTITY
-          </div>
-
+          <div class="identity-mini-title">PROFESSIONAL IDENTITY</div>
           <div class="identity-tags">
             <span>Data Analysis</span>
             <span>Multimedia Design</span>
@@ -1199,24 +1277,18 @@
 
           <div class="identity-divider"></div>
 
-          <div class="identity-mini-title">
-            BRAND PHILOSOPHY
-          </div>
-
+          <div class="identity-mini-title">BRAND PHILOSOPHY</div>
           <p>
             Turning curiosity into knowledge, ideas into
             concepts, and creativity into digital possibilities.
           </p>
-
         </aside>
-
       </div>
     </section>
 
     <!-- FIVE MAIN PROFESSIONAL TITLES -->
     <section class="titles-section" id="titles">
       <div class="container">
-
         <div class="titles-heading reveal">
           <span class="eyebrow">My Professional Identity</span>
           <h2>Professional <span>Titles</span></h2>
@@ -1227,7 +1299,6 @@
         </div>
 
         <div class="title-grid">
-
           <article class="title-card reveal">
             <div class="title-icon">📊</div>
             <h3>Data Analyst</h3>
@@ -1257,7 +1328,6 @@
             <h3>Digital Solutions Creator</h3>
             <p>Ideas & Digital Experiences</p>
           </article>
-
         </div>
       </div>
     </section>
@@ -1265,7 +1335,6 @@
     <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">01 / About Me</span>
           <h2>Behind the <span>EstySmart Identity</span></h2>
@@ -1277,7 +1346,6 @@
         </div>
 
         <div class="about-grid">
-
           <div class="about-copy reveal">
             <p>
               I am <strong>Esther Isioma Abiazie</strong>,
@@ -1343,7 +1411,6 @@
               <span>Creativity. Technology. Innovation. Impact.</span>
             </div>
           </aside>
-
         </div>
       </div>
     </section>
@@ -1351,7 +1418,6 @@
     <!-- ADDITIONAL PROFESSIONAL ROLES -->
     <section class="section" id="expertise">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">02 / Skills & Areas of Expertise</span>
           <h2>Additional Professional <span>Roles</span></h2>
@@ -1363,7 +1429,6 @@
         </div>
 
         <div class="expertise-grid">
-
           <article class="expertise-card card reveal">
             <div class="expertise-icon">🖌️</div>
             <h3>Graphic Designer</h3>
@@ -1444,7 +1509,6 @@
               and organised digital information.
             </p>
           </article>
-
         </div>
       </div>
     </section>
@@ -1452,7 +1516,6 @@
     <!-- SERVICES -->
     <section class="section">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">03 / Creative & Digital Areas</span>
           <h2>Services & <span>Capabilities</span></h2>
@@ -1464,7 +1527,6 @@
         </div>
 
         <div class="services-grid">
-
           <article class="service-card card reveal">
             <h3>Data & Information</h3>
             <p>
@@ -1512,7 +1574,6 @@
               DevSecOps and responsible technology practices.
             </p>
           </article>
-
         </div>
       </div>
     </section>
@@ -1520,7 +1581,6 @@
     <!-- APPROACH -->
     <section class="section approach">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">04 / Working Philosophy</span>
           <h2>My Approach to <span>Digital Projects</span></h2>
@@ -1532,7 +1592,6 @@
         </div>
 
         <div class="approach-grid">
-
           <article class="approach-card reveal">
             <span>01 — DISCOVER</span>
             <h3>Understand</h3>
@@ -1568,7 +1627,6 @@
               and learn from the process.
             </p>
           </article>
-
         </div>
       </div>
     </section>
@@ -1576,7 +1634,6 @@
     <!-- PROJECTS -->
     <section class="section" id="projects">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">05 / Selected Work</span>
           <h2>Featured <span>Projects & Creations</span></h2>
@@ -1588,7 +1645,6 @@
         </div>
 
         <div class="project-grid">
-
           <article class="project-card card reveal">
             <div class="project-art"><span>ABI-JO</span></div>
             <div class="project-content">
@@ -1606,8 +1662,7 @@
               </div>
               <a class="project-link"
                  href="https://abi-joautomobiles.lovable.app/"
-                 target="_blank"
-                 rel="noopener noreferrer">
+                 target="_blank" rel="noopener noreferrer">
                 Explore Project ↗
               </a>
             </div>
@@ -1709,7 +1764,6 @@
               <span class="project-link">Educational Ebook Project</span>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -1717,7 +1771,6 @@
     <!-- EDUCATION -->
     <section class="section" id="education">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">06 / Academic Background</span>
           <h2>Education & <span>Professional Development</span></h2>
@@ -1729,10 +1782,8 @@
         </div>
 
         <div class="education-grid">
-
           <article class="education-card card reveal">
             <h3>Academic Education</h3>
-
             <div class="education-entry">
               <strong>St. Agnes Group of School</strong>
               <span>WAEC / WASSCE · 2026</span>
@@ -1782,9 +1833,7 @@
                 digital documentation.
               </p>
             </div>
-
           </article>
-
         </div>
       </div>
     </section>
@@ -1792,7 +1841,6 @@
     <!-- TOOLS -->
     <section class="section">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">07 / Technology & Tools</span>
           <h2>Tools & <span>Learning Areas</span></h2>
@@ -1822,14 +1870,12 @@
           <span class="tool">Cybersecurity Fundamentals</span>
           <span class="tool">DevSecOps Principles</span>
         </div>
-
       </div>
     </section>
 
     <!-- FUTURE DIRECTION -->
     <section class="section">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">08 / Professional Direction</span>
           <h2>Growth, Learning & <span>Future Vision</span></h2>
@@ -1838,16 +1884,13 @@
 
         <div class="growth-panel reveal">
           <h3>Building Tomorrow Through Continuous Learning</h3>
-
           <p>
             My professional journey is centred on developing
             practical digital skills, strengthening analytical
             abilities and exploring the possibilities of
             emerging technologies.
           </p>
-
           <br>
-
           <p>
             I am interested in opportunities that encourage
             learning, collaboration, creativity and responsible
@@ -1857,14 +1900,12 @@
             and DevSecOps.
           </p>
         </div>
-
       </div>
     </section>
 
     <!-- RESOURCES -->
     <section class="section" id="resources">
       <div class="container">
-
         <div class="section-heading reveal">
           <span class="eyebrow">09 / Professional Resources</span>
           <h2>Explore My <span>Professional Resources</span></h2>
@@ -1876,7 +1917,6 @@
         </div>
 
         <div class="resources-grid">
-
           <article class="resource-card card reveal">
             <div class="resource-icon">📄</div>
             <h3>Professional CV</h3>
@@ -1949,7 +1989,6 @@
             </p>
             <a href="#home">Return to Homepage ↑</a>
           </article>
-
         </div>
       </div>
     </section>
@@ -1957,12 +1996,9 @@
     <!-- CONTACT -->
     <section class="section" id="contact">
       <div class="container">
-
         <div class="contact-panel reveal">
           <span class="eyebrow">10 / Let's Connect</span>
-
           <h2>Let's Connect & <span>Create Impact.</span></h2>
-
           <p>
             I welcome meaningful professional conversations,
             learning opportunities, creative discussions
@@ -1987,7 +2023,6 @@
               Portfolio ↗
             </a>
           </div>
-
         </div>
       </div>
     </section>
@@ -1997,7 +2032,6 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-
       <div>
         <div class="footer-brand">ESTYSMART.</div>
         <p>Creativity. Technology. Innovation. Impact.</p>
@@ -2013,7 +2047,6 @@
       </div>
 
       <p>© <span id="currentYear"></span> EstySmart. All rights reserved.</p>
-
     </div>
   </footer>
 
@@ -2030,7 +2063,6 @@
     document.addEventListener("DOMContentLoaded", function () {
       "use strict";
 
-      // Copyright year
       const year = document.getElementById("currentYear");
 
       if (year) {
@@ -2053,15 +2085,14 @@
       function toggleMenu() {
         if (!menuToggle || !navLinks) return;
 
-        const open = navLinks.classList.toggle("open");
+        const isOpen = navLinks.classList.toggle("open");
 
-        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute(
           "aria-label",
-          open ? "Close navigation" : "Open navigation"
+          isOpen ? "Close navigation" : "Open navigation"
         );
-
-        menuToggle.textContent = open ? "✕" : "☰";
+        menuToggle.textContent = isOpen ? "✕" : "☰";
       }
 
       if (menuToggle && navLinks) {
@@ -2078,7 +2109,7 @@
         });
 
         window.addEventListener("resize", function () {
-          if (window.innerWidth > 760) {
+          if (window.innerWidth > 900) {
             closeMenu();
           }
         });
