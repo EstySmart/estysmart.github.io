@@ -2,964 +2,1910 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080d1b">
-  <meta name="description" content="EstySmart — Esther Isioma Abiazie. Data Analyst, Multimedia Specialist, Cybersecurity and DevOps learner, and Digital Solutions Creator.">
-  <title>EstySmart | Esther Isioma Abiazie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1b">
+<meta name="description" content="EstySmart — Esther Isioma Abiazie. Data Analyst, Multimedia Specialist, Cybersecurity / Ethical Hacking Trainee, DevOps Trainee and Digital Solutions Creator.">
+<title>EstySmart | Esther Isioma Abiazie</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #080d1b;
-      --bg-deep: #050914;
-      --surface: #0c1528;
-      --surface-2: #101d34;
-      --gold: #d6ad55;
-      --gold-light: #f0d18a;
-      --blue: #2585e8;
-      --text: #f2f3f8;
-      --muted: #aab5c8;
-      --line: rgba(214,173,85,.20);
-      --border: rgba(160,177,207,.15);
-      --serif: "Cormorant Garamond", Georgia, serif;
-      --sans: "DM Sans", Arial, sans-serif;
-      --mono: "DM Mono", monospace;
-      --max: 1190px;
-    }
+<style>
+:root {
+  --background: #080d1b;
+  --background-dark: #050914;
+  --background-light: #0b1426;
+  --card: #0c162a;
+  --card-light: #101d34;
+  --gold: #d6ad55;
+  --gold-light: #f0d18a;
+  --blue: #2585e8;
+  --white: #f4f5fa;
+  --muted: #aab5c8;
+  --border: rgba(170,185,210,.14);
+  --gold-border: rgba(214,173,85,.28);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --mono: "DM Mono", monospace;
+  --width: 1190px;
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 95px; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    img { max-width: 100%; display: block; }
-    ::selection { background: var(--gold); color: #08101f; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .container { width: min(var(--max), calc(100% - 48px)); margin: auto; }
-    .section { padding: 112px 0; position: relative; }
-    .section-alt { background: #0a1325; border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(255,255,255,.04); }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: var(--gold);
-      font: 500 10px var(--mono);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-    .eyebrow::after { content: ""; width: 40px; height: 1px; background: var(--gold); opacity: .65; }
+body {
+  background: var(--background);
+  color: var(--white);
+  font-family: var(--sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-    h1, h2, h3, .serif { font-family: var(--serif); font-weight: 400; }
-    .section-title {
-      font-size: clamp(38px, 5vw, 56px);
-      line-height: 1.08;
-      letter-spacing: -.8px;
-      margin-bottom: 18px;
-    }
-    .section-intro { max-width: 680px; color: var(--muted); font-size: 16px; }
-    .gold { color: var(--gold); }
-    .muted { color: var(--muted); }
+body.modal-open { overflow: hidden; }
 
-    /* Navigation */
-    .header {
-      position: fixed;
-      z-index: 1000;
-      top: 0; left: 0; right: 0;
-      height: 76px;
-      background: rgba(5,9,20,.90);
-      border-bottom: 1px solid rgba(214,173,85,.17);
-      backdrop-filter: blur(18px);
-    }
-    .nav {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .brand-mark {
-      width: 38px; height: 38px;
-      border: 1px solid var(--gold);
-      display: grid; place-items: center;
-      color: var(--gold);
-      font: 500 15px var(--serif);
-      position: relative;
-    }
-    .brand-mark::after { content: "✦"; position: absolute; right: 4px; top: 0; font-size: 9px; }
-    .brand-name { font: 600 16px var(--serif); letter-spacing: 3px; }
-    .brand-sub { display: block; color: var(--gold); font: 8px var(--mono); letter-spacing: 2px; margin-top: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 24px; }
-    .nav-links a {
-      color: #b8c0d0;
-      font: 500 9px var(--mono);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: color .25s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-    .nav-links .nav-contact {
-      border: 1px solid rgba(214,173,85,.55);
-      border-radius: 30px;
-      padding: 10px 20px;
-      color: var(--gold);
-    }
-    .menu-toggle {
-      display: none;
-      color: var(--gold);
-      border: 1px solid var(--line);
-      background: transparent;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
 
-    /* Hero */
-    .hero {
-      min-height: 720px;
-      padding: 145px 0 95px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse at 82% 42%, rgba(19,80,151,.24), transparent 40%),
-        radial-gradient(ellipse at 5% 70%, rgba(10,40,92,.20), transparent 38%),
-        linear-gradient(115deg, #070c19, #09152a 70%, #071020);
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 780px; height: 780px;
-      border: 1px solid rgba(214,173,85,.16);
-      border-radius: 50%;
-      right: -310px; top: -440px;
-      box-shadow: 0 0 0 24px rgba(214,173,85,.025), 0 0 0 70px rgba(37,133,232,.025);
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: .16;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle at 20% 25%, #2585e8 1px, transparent 2px),
-        radial-gradient(circle at 80% 65%, #2585e8 1px, transparent 2px);
-      background-size: 70px 70px, 110px 110px;
-      mask-image: linear-gradient(90deg, black, transparent 90%);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 70px;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-kicker { color: var(--gold); font: 10px var(--mono); letter-spacing: 4px; margin-bottom: 20px; }
-    .hero h1 { font-size: clamp(48px, 6vw, 76px); line-height: .98; letter-spacing: -1.5px; }
-    .hero-brand { color: var(--gold); font: 500 clamp(30px, 4vw, 42px) var(--serif); letter-spacing: 3px; margin-top: 18px; }
-    .tagline { color: #aeb8ca; font: 500 10px var(--mono); letter-spacing: 3px; margin-top: 7px; }
-    .hero-rule { width: 100%; max-width: 480px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 28px 0 24px; }
-    .role-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 24px; }
-    .role-tag {
-      padding: 7px 13px;
-      border: 1px solid rgba(214,173,85,.3);
-      border-radius: 30px;
-      color: #c7cfdd;
-      font: 9px var(--mono);
-      letter-spacing: 1.1px;
-    }
-    .hero-description { max-width: 570px; color: var(--muted); font-size: 15px; line-height: 1.85; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 12px 21px;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      background: transparent;
-      font: 500 10px var(--mono);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: .25s;
-      cursor: pointer;
-    }
-    .btn:hover { background: var(--gold); color: #08101f; transform: translateY(-2px); }
-    .btn-primary { background: var(--gold); color: #08101f; }
-    .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
-    .hero-visual { position: relative; max-width: 470px; justify-self: end; width: 100%; }
-    .hero-visual::before {
-      content: ""; position: absolute; inset: -12px 12px 12px -12px;
-      border: 1px solid rgba(214,173,85,.48); z-index: -1;
-    }
-    .hero-visual img {
-      width: 100%; aspect-ratio: 4/5; object-fit: cover;
-      border: 1px solid rgba(37,133,232,.45);
-      box-shadow: 0 30px 90px rgba(0,0,0,.42);
-    }
-    .visual-caption {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 18px;
-      background: linear-gradient(transparent, rgba(4,8,17,.94));
-      color: #d6deed; font: 9px var(--mono); letter-spacing: 1.5px;
-    }
+::selection {
+  background: var(--gold);
+  color: #080d1b;
+}
 
-    /* Focus cards */
-    .focus-strip { padding: 60px 0; background: #0b1426; border-bottom: 1px solid var(--border); }
-    .focus-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-    .focus-card {
-      border: 1px solid var(--border);
-      padding: 25px 23px;
-      min-height: 205px;
-      background: rgba(7,13,27,.35);
-      transition: .3s;
-    }
-    .focus-card:hover { border-color: rgba(214,173,85,.55); transform: translateY(-5px); background: rgba(16,29,52,.7); }
-    .focus-icon {
-      width: 43px; height: 43px; border: 1px solid var(--line);
-      display: grid; place-items: center; color: var(--gold);
-      font-size: 20px; margin-bottom: 18px;
-    }
-    .focus-card h3 { font-size: 21px; line-height: 1.2; margin-bottom: 12px; }
-    .focus-card p { color: var(--muted); font-size: 13px; line-height: 1.7; }
+.container {
+  width: min(var(--width), calc(100% - 48px));
+  margin: auto;
+}
 
-    /* About */
-    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 85px; align-items: start; }
-    .about-heading { font-size: clamp(42px,5vw,61px); line-height: 1.02; }
-    .about-copy { color: var(--muted); font-size: 15px; line-height: 1.95; }
-    .about-copy p + p { margin-top: 18px; }
-    .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; margin-top: 34px; }
-    .stat { border-top: 1px solid var(--line); padding-top: 15px; }
-    .stat strong { display: block; color: var(--gold); font: 30px var(--serif); }
-    .stat span { color: var(--muted); font: 9px var(--mono); letter-spacing: 1px; text-transform: uppercase; }
+.section {
+  padding: 110px 0;
+  position: relative;
+}
 
-    /* Skills */
-    .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 42px; }
-    .skill-card { border: 1px solid var(--border); padding: 24px; background: rgba(7,13,27,.3); }
-    .skill-card h3 { font-size: 22px; margin-bottom: 18px; }
-    .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill-list span {
-      font-size: 11px; color: #c1cad9;
-      border: 1px solid rgba(160,177,207,.15);
-      padding: 6px 9px; background: rgba(255,255,255,.02);
-    }
+.section-dark {
+  background: #070c19;
+  border-top: 1px solid rgba(255,255,255,.035);
+  border-bottom: 1px solid rgba(255,255,255,.035);
+}
 
-    /* Projects */
-    .projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 45px; }
-    .project-card {
-      background: #080f1f;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: transform .35s, border-color .35s, box-shadow .35s;
-    }
-    .project-card:hover { transform: translateY(-7px); border-color: rgba(214,173,85,.5); box-shadow: 0 22px 55px rgba(0,0,0,.28); }
-    .project-image { position: relative; overflow: hidden; background: #101b30; }
-    .project-image img { width: 100%; aspect-ratio: 1.42/1; object-fit: cover; transition: transform .6s; }
-    .project-card:hover .project-image img { transform: scale(1.045); }
-    .project-number {
-      position: absolute; top: 14px; left: 14px;
-      border: 1px solid rgba(214,173,85,.55);
-      border-radius: 30px; padding: 5px 12px;
-      background: rgba(5,10,22,.85); color: var(--gold);
-      font: 10px var(--mono); letter-spacing: 2px;
-    }
-    .project-body { padding: 23px 23px 25px; }
-    .project-category { color: var(--gold); font: 9px var(--mono); letter-spacing: 2.3px; text-transform: uppercase; margin-bottom: 13px; }
-    .project-body h3 { font-size: 25px; line-height: 1.12; margin-bottom: 12px; }
-    .project-body p { color: var(--muted); font-size: 13px; line-height: 1.75; min-height: 68px; }
-    .project-link { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font: 10px var(--mono); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 20px; }
-    .project-link:hover { color: var(--gold-light); }
-    .project-link span { transition: transform .2s; }
-    .project-link:hover span { transform: translateX(5px); }
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
 
-    /* Video */
-    .video-panel {
-      margin-top: 48px;
-      display: grid; grid-template-columns: .8fr 1.2fr;
-      gap: 35px; align-items: center;
-      border: 1px solid var(--border);
-      background: linear-gradient(120deg, #0b1529, #101d34);
-      padding: 28px;
-    }
-    .video-panel h3 { font-size: 34px; margin-bottom: 13px; }
-    .video-panel p { color: var(--muted); font-size: 14px; }
-    .video-wrap { background: #030711; border: 1px solid var(--line); }
-    .video-wrap video { display: block; width: 100%; aspect-ratio: 16/9; }
-    .video-fallback { display: block; color: var(--gold); font: 10px var(--mono); padding: 10px; }
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--gold);
+  font: 500 10px var(--mono);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 
-    /* Certifications */
-    .cert-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 42px; }
-    .cert-card {
-      display: flex; align-items: center; justify-content: space-between; gap: 15px;
-      border: 1px solid var(--border); background: #0a1426;
-      padding: 20px; transition: .25s;
-    }
-    .cert-card:hover { border-color: rgba(214,173,85,.55); transform: translateY(-3px); }
-    .cert-card h3 { font-size: 21px; line-height: 1.2; }
-    .cert-card p { color: var(--muted); font: 9px var(--mono); letter-spacing: 1px; margin-top: 6px; }
-    .cert-view { color: var(--gold); font: 9px var(--mono); letter-spacing: 1px; white-space: nowrap; }
-    .cert-view::after { content: " ↗"; }
+.eyebrow::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  opacity: .65;
+}
 
-    /* Lightbox */
-    .lightbox {
-      position: fixed; inset: 0; z-index: 2000;
-      background: rgba(1,4,12,.94);
-      display: none; align-items: center; justify-content: center;
-      padding: 35px;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox img { max-width: min(100%, 1050px); max-height: 85vh; object-fit: contain; border: 1px solid var(--line); }
-    .lightbox-close {
-      position: absolute; top: 20px; right: 25px;
-      background: transparent; color: white; border: 1px solid var(--line);
-      width: 42px; height: 42px; font-size: 25px; cursor: pointer;
-    }
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
 
-    /* Education and resources */
-    .timeline { margin-top: 42px; border-left: 1px solid rgba(214,173,85,.4); padding-left: 28px; }
-    .timeline-item { position: relative; padding: 0 0 35px; }
-    .timeline-item::before {
-      content: ""; position: absolute; width: 9px; height: 9px;
-      border-radius: 50%; background: var(--gold);
-      left: -33px; top: 8px; box-shadow: 0 0 0 5px rgba(214,173,85,.1);
-    }
-    .timeline-date { color: var(--gold); font: 10px var(--mono); letter-spacing: 2px; }
-    .timeline-item h3 { font-size: 25px; margin: 7px 0; }
-    .timeline-item p { color: var(--muted); font-size: 14px; }
-    .resource-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 38px; }
-    .resource-card { border: 1px solid var(--border); padding: 25px; background: #091326; transition: .25s; }
-    .resource-card:hover { border-color: var(--gold); transform: translateY(-4px); }
-    .resource-card .resource-icon { color: var(--gold); font-size: 23px; }
-    .resource-card h3 { font-size: 22px; margin: 13px 0 7px; }
-    .resource-card p { color: var(--muted); font-size: 13px; margin-bottom: 15px; }
+.section-title {
+  font-size: clamp(40px, 5vw, 59px);
+  line-height: 1.05;
+  letter-spacing: -.8px;
+}
 
-    /* CV */
-    .cv-panel {
-      display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px;
-      padding: 42px; border: 1px solid rgba(214,173,85,.35);
-      background: radial-gradient(circle at 90% 20%, rgba(37,133,232,.16), transparent 35%), #0b1528;
-      margin-top: 42px;
-    }
-    .cv-panel h3 { font-size: 34px; margin-bottom: 8px; }
-    .cv-panel p { color: var(--muted); font-size: 14px; }
+.section-description {
+  color: var(--muted);
+  max-width: 680px;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-top: 17px;
+}
 
-    /* Contact */
-    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 65px; margin-top: 42px; }
-    .contact-copy { color: var(--muted); font-size: 15px; }
-    .contact-detail { border-bottom: 1px solid var(--border); padding: 17px 0; }
-    .contact-detail span { display: block; color: var(--gold); font: 9px var(--mono); letter-spacing: 2px; margin-bottom: 5px; }
-    .contact-detail a, .contact-detail strong { color: #e1e6ef; font-size: 14px; font-weight: 500; overflow-wrap: anywhere; }
-    .contact-detail a:hover { color: var(--gold); }
-    .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .social-links a { border: 1px solid var(--border); padding: 9px 13px; color: var(--muted); font: 9px var(--mono); letter-spacing: 1px; }
-    .social-links a:hover { border-color: var(--gold); color: var(--gold); }
+.gold { color: var(--gold); }
+.muted { color: var(--muted); }
 
-    footer { padding: 30px 0; background: #050914; border-top: 1px solid var(--line); }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .footer-inner p { color: #7e8aa0; font: 9px var(--mono); letter-spacing: 1px; }
-    .back-top { color: var(--gold); font: 10px var(--mono); }
+/* NAVIGATION */
 
-    /* Motion */
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 76px;
+  z-index: 1000;
+  background: rgba(5,9,20,.94);
+  border-bottom: 1px solid rgba(214,173,85,.17);
+  backdrop-filter: blur(18px);
+}
 
-    /* Responsive */
-    @media (max-width: 1000px) {
-      .nav-links { gap: 13px; }
-      .nav-links a { font-size: 8px; letter-spacing: 1px; }
-      .hero-grid { gap: 38px; }
-      .focus-grid, .skills-grid { grid-template-columns: repeat(2,1fr); }
-      .projects-grid { grid-template-columns: repeat(2,1fr); }
-    }
-    @media (max-width: 760px) {
-      .container { width: min(100% - 34px, var(--max)); }
-      .section { padding: 78px 0; }
-      .header { height: 68px; }
-      .menu-toggle { display: block; }
-      .nav-links {
-        display: none; position: absolute; top: 68px; left: 0; right: 0;
-        padding: 20px 25px 25px; background: rgba(5,9,20,.98);
-        border-bottom: 1px solid var(--line);
-        flex-direction: column; align-items: stretch; gap: 0;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { padding: 13px 0; font-size: 10px; }
-      .nav-links .nav-contact { text-align: center; margin-top: 8px; }
-      .hero { padding: 115px 0 65px; min-height: auto; }
-      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
-      .hero-visual { justify-self: center; max-width: 390px; }
-      .hero h1 { font-size: clamp(48px, 12vw, 66px); }
-      .about-grid, .video-panel, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
-      .projects-grid, .cert-grid, .resource-grid { grid-template-columns: 1fr; }
-      .project-body p { min-height: auto; }
-      .cv-panel { grid-template-columns: 1fr; padding: 28px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-    }
-    @media (max-width: 460px) {
-      .focus-grid, .skills-grid { grid-template-columns: 1fr; }
-      .stat-row { gap: 8px; }
-      .stat strong { font-size: 25px; }
-      .role-tag { font-size: 8px; }
-      .section-title { font-size: 40px; }
-      .lightbox { padding: 15px; }
-    }
-  </style>
+.nav-inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font: 600 16px var(--serif);
+  position: relative;
+}
+
+.brand-logo::after {
+  content: "✦";
+  position: absolute;
+  right: 3px;
+  top: 0;
+  font-size: 9px;
+}
+
+.brand-name {
+  font: 600 16px var(--serif);
+  letter-spacing: 3px;
+}
+
+.brand-subtitle {
+  display: block;
+  color: var(--gold);
+  font: 8px var(--mono);
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.nav-links a {
+  color: #b5bdcc;
+  font: 500 9px var(--mono);
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  transition: color .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+}
+
+.nav-links .contact-nav {
+  border: 1px solid rgba(214,173,85,.55);
+  border-radius: 30px;
+  padding: 10px 19px;
+  color: var(--gold);
+}
+
+.menu-button {
+  display: none;
+  border: 1px solid var(--gold-border);
+  background: transparent;
+  color: var(--gold);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 730px;
+  padding: 145px 0 90px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 83% 40%, rgba(20,83,157,.22), transparent 42%),
+    radial-gradient(ellipse at 10% 75%, rgba(16,46,100,.16), transparent 38%),
+    linear-gradient(115deg,#070c19,#09152a 72%,#071020);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 780px;
+  height: 780px;
+  right: -340px;
+  top: -460px;
+  border-radius: 50%;
+  border: 1px solid rgba(214,173,85,.18);
+  box-shadow:
+    0 0 0 22px rgba(214,173,85,.025),
+    0 0 0 65px rgba(37,133,232,.025),
+    0 0 0 120px rgba(214,173,85,.018);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle,#2585e8 1px,transparent 2px),
+    radial-gradient(circle,#d6ad55 1px,transparent 2px);
+  background-size: 75px 75px, 125px 125px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 65px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker {
+  color: var(--gold);
+  font: 10px var(--mono);
+  letter-spacing: 4px;
+  margin-bottom: 23px;
+}
+
+.hero h1 {
+  font-size: clamp(49px,6.2vw,78px);
+  line-height: .98;
+  letter-spacing: -1.5px;
+}
+
+.hero-brand {
+  color: var(--gold);
+  font: 500 clamp(32px,4vw,44px) var(--serif);
+  letter-spacing: 3px;
+  margin-top: 16px;
+}
+
+.hero-tagline {
+  color: #aeb8ca;
+  font: 500 10px var(--mono);
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+.hero-line {
+  height: 1px;
+  width: 100%;
+  max-width: 490px;
+  background: linear-gradient(90deg,var(--gold),transparent);
+  margin: 29px 0 24px;
+}
+
+.role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 24px;
+}
+
+.role-tag {
+  border: 1px solid rgba(214,173,85,.31);
+  border-radius: 30px;
+  padding: 7px 13px;
+  color: #c4ccda;
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+}
+
+.hero-description {
+  max-width: 570px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 21px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font: 500 10px var(--mono);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.button:hover {
+  background: var(--gold);
+  color: #080d1b;
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--gold);
+  color: #080d1b;
+}
+
+.button-primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+.hero-image-wrap {
+  width: 100%;
+  max-width: 470px;
+  justify-self: end;
+  position: relative;
+}
+
+.hero-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -12px 12px 12px -12px;
+  border: 1px solid rgba(214,173,85,.55);
+  z-index: -1;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border: 1px solid rgba(37,133,232,.4);
+  box-shadow: 0 30px 90px rgba(0,0,0,.4);
+}
+
+.hero-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 19px;
+  background: linear-gradient(transparent,rgba(4,8,17,.94));
+  color: #e1e6ef;
+  font: 9px var(--mono);
+  letter-spacing: 1.5px;
+}
+
+/* PROFESSIONAL FOCUS */
+
+.focus-section {
+  padding: 58px 0;
+  background: #0b1426;
+  border-bottom: 1px solid var(--border);
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+}
+
+.focus-card {
+  min-height: 205px;
+  padding: 25px 23px;
+  background: rgba(7,13,27,.35);
+  border: 1px solid var(--border);
+  transition: .3s;
+}
+
+.focus-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(214,173,85,.55);
+  background: rgba(16,29,52,.8);
+}
+
+.focus-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.focus-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 11px;
+}
+
+.focus-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-heading {
+  font-size: clamp(43px,5vw,63px);
+  line-height: 1.02;
+}
+
+.about-copy {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.about-copy p + p { margin-top: 17px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.stat {
+  border-top: 1px solid var(--gold-border);
+  padding-top: 15px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font: 34px var(--serif);
+}
+
+.stat span {
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* SKILLS */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.skill-card {
+  border: 1px solid var(--border);
+  background: rgba(7,13,27,.32);
+  padding: 25px;
+  transition: .3s;
+}
+
+.skill-card:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-4px);
+}
+
+.skill-card h3 {
+  font-size: 24px;
+  margin-bottom: 19px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags span {
+  color: #c2cbda;
+  border: 1px solid rgba(160,177,207,.16);
+  padding: 6px 9px;
+  font-size: 11px;
+  background: rgba(255,255,255,.02);
+}
+
+/* PROJECTS */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.project-card {
+  overflow: hidden;
+  background: #080f1f;
+  border: 1px solid var(--border);
+  transition: transform .35s,border-color .35s,box-shadow .35s;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(214,173,85,.5);
+  box-shadow: 0 22px 55px rgba(0,0,0,.3);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  background: #101b30;
+}
+
+.project-image img {
+  width: 100%;
+  aspect-ratio: 1.42/1;
+  object-fit: cover;
+  transition: transform .6s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.045);
+}
+
+.project-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  border: 1px solid rgba(214,173,85,.6);
+  border-radius: 30px;
+  color: var(--gold);
+  background: rgba(5,10,22,.88);
+  font: 10px var(--mono);
+  letter-spacing: 2px;
+}
+
+.project-body { padding: 23px 23px 26px; }
+
+.project-category {
+  color: var(--gold);
+  font: 9px var(--mono);
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.project-body h3 {
+  font-size: 26px;
+  line-height: 1.13;
+  margin-bottom: 12px;
+}
+
+.project-body p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 70px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font: 10px var(--mono);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 19px;
+}
+
+.project-link:hover { color: var(--gold-light); }
+
+/* HECKYBABA VIDEO THUMBNAIL */
+
+.video-feature {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 38px;
+  align-items: center;
+  margin-top: 60px;
+  padding: 30px;
+  background: linear-gradient(120deg,#0b1529,#101d34);
+  border: 1px solid var(--border);
+}
+
+.video-copy h3 {
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.video-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.video-copy .video-contact {
+  margin-top: 22px;
+}
+
+.video-thumbnail {
+  position: relative;
+  overflow: hidden;
+  background: #050914;
+  border: 1px solid rgba(214,173,85,.4);
+}
+
+.video-thumbnail img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.video-thumbnail:hover img { transform: scale(1.035); }
+
+.video-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(transparent,rgba(3,8,18,.96));
+  color: white;
+  font: 10px var(--mono);
+  letter-spacing: 2px;
+}
+
+.video-play-symbol {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+/* CERTIFICATES */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.cert-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  text-align: left;
+  color: var(--white);
+  cursor: pointer;
+  background: #0a1426;
+  border: 1px solid var(--border);
+  transition: .25s;
+}
+
+.cert-card:hover {
+  border-color: rgba(214,173,85,.65);
+  transform: translateY(-4px);
+  background: #101d34;
+}
+
+.cert-card h3 {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 1.2px;
+  margin-top: 8px;
+}
+
+.cert-open {
+  flex-shrink: 0;
+  color: var(--gold);
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.cert-open::after { content: " ↗"; }
+
+/* CERTIFICATE MODAL */
+
+.certificate-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(1,4,12,.96);
+}
+
+.certificate-modal.open { display: flex; }
+
+.certificate-modal img {
+  max-width: min(100%,1100px);
+  max-height: 86vh;
+  object-fit: contain;
+  border: 1px solid var(--gold-border);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid var(--gold-border);
+  color: white;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* EDUCATION */
+
+.timeline {
+  margin-top: 42px;
+  border-left: 1px solid rgba(214,173,85,.45);
+  padding-left: 29px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 37px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px rgba(214,173,85,.1);
+}
+
+.timeline-date {
+  color: var(--gold);
+  font: 10px var(--mono);
+  letter-spacing: 2px;
+}
+
+.timeline-item h3 {
+  font-size: 26px;
+  margin: 7px 0;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ONGOING TRAINING */
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.training-card {
+  padding: 27px;
+  background: #0b1528;
+  border: 1px solid var(--gold-border);
+}
+
+.training-status {
+  display: inline-block;
+  color: var(--gold);
+  font: 9px var(--mono);
+  letter-spacing: 1.5px;
+  border: 1px solid var(--gold-border);
+  padding: 6px 10px;
+  margin-bottom: 16px;
+}
+
+.training-card h3 {
+  font-size: 27px;
+  margin-bottom: 9px;
+}
+
+.training-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* RESOURCES */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
+  margin-top: 40px;
+}
+
+.resource-card {
+  padding: 26px;
+  background: #091326;
+  border: 1px solid var(--border);
+  transition: .3s;
+}
+
+.resource-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.resource-icon {
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.resource-card h3 {
+  font-size: 24px;
+  margin: 12px 0 7px;
+}
+
+.resource-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* CV */
+
+.cv-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 30px;
+  padding: 42px;
+  border: 1px solid rgba(214,173,85,.36);
+  background:
+    radial-gradient(circle at 90% 20%,rgba(37,133,232,.16),transparent 35%),
+    #0b1528;
+  margin-top: 40px;
+}
+
+.cv-panel h3 {
+  font-size: 37px;
+  margin-bottom: 8px;
+}
+
+.cv-panel p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 65px;
+  margin-top: 43px;
+}
+
+.contact-intro {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-detail {
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0;
+}
+
+.contact-detail span {
+  display: block;
+  color: var(--gold);
+  font: 9px var(--mono);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.contact-detail a,
+.contact-detail strong {
+  color: #e1e6ef;
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover { color: var(--gold); }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+  transition: .25s;
+}
+
+.social-links a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 30px 0;
+  background: #050914;
+  border-top: 1px solid var(--gold-border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-inner p {
+  color: #8390a5;
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+}
+
+.back-top {
+  color: var(--gold);
+  font: 10px var(--mono);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px) {
+  .nav-links { gap: 13px; }
+  .nav-links a { font-size: 8px; letter-spacing: 1px; }
+  .hero-grid { gap: 35px; }
+  .focus-grid,.skills-grid { grid-template-columns: repeat(2,1fr); }
+  .projects-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:760px) {
+  .container { width: calc(100% - 34px); }
+  .section { padding: 78px 0; }
+  .site-header { height: 68px; }
+  .menu-button { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    padding: 18px 25px 25px;
+    background: rgba(5,9,20,.99);
+    border-bottom: 1px solid var(--gold-border);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 13px 0; font-size: 10px; }
+  .nav-links .contact-nav { text-align: center; margin-top: 8px; }
+
+  .hero { padding: 115px 0 65px; min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; gap: 43px; }
+  .hero-image-wrap { justify-self: center; max-width: 390px; }
+  .hero h1 { font-size: clamp(48px,12vw,67px); }
+
+  .about-grid,
+  .video-feature,
+  .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+
+  .projects-grid,
+  .cert-grid,
+  .resource-grid { grid-template-columns: 1fr; }
+
+  .project-body p { min-height: auto; }
+  .cv-panel { grid-template-columns: 1fr; padding: 28px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media(max-width:460px) {
+  .focus-grid,.skills-grid,.training-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 40px; }
+  .stats { gap: 8px; }
+  .stat strong { font-size: 26px; }
+  .role-tag { font-size: 8px; }
+  .certificate-modal { padding: 14px; }
+  .video-feature { padding: 19px; }
+}
+</style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a href="#home" class="brand" aria-label="EstySmart home">
-        <span class="brand-mark">ES</span>
-        <span>
-          <span class="brand-name">ESTYSMART</span>
-          <span class="brand-sub">DATA · MULTIMEDIA · SECURITY</span>
-        </span>
-      </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<header class="site-header">
+  <div class="container nav-inner">
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#education">Education</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact" class="nav-contact">Contact</a>
-      </nav>
+    <a href="#home" class="brand" aria-label="EstySmart home">
+      <span class="brand-logo">ES</span>
+      <span>
+        <span class="brand-name">ESTYSMART</span>
+        <span class="brand-subtitle">DATA · MULTIMEDIA · SECURITY</span>
+      </span>
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#education">Education</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact" class="contact-nav">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="reveal">
+      <div class="hero-kicker">— HELLO, I'M</div>
+
+      <h1>Esther Isioma Abiazie</h1>
+
+      <div class="hero-brand">EstySmart</div>
+
+      <p class="hero-tagline">
+        CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.
+      </p>
+
+      <div class="hero-line"></div>
+
+      <div class="role-tags">
+        <span class="role-tag">DATA ANALYST</span>
+        <span class="role-tag">MULTIMEDIA SPECIALIST</span>
+        <span class="role-tag">CYBERSECURITY / ETHICAL HACKING TRAINEE</span>
+        <span class="role-tag">DEVOPS TRAINEE</span>
+        <span class="role-tag">DIGITAL SOLUTIONS CREATOR</span>
+      </div>
+
+      <p class="hero-description">
+        I am an aspiring digital professional exploring the intersection
+        of data, multimedia, cybersecurity and technology-driven creativity.
+        I enjoy turning ideas, information and creative concepts into
+        meaningful digital experiences through continuous learning and
+        independent projects.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="button button-primary">Explore My Work</a>
+        <a href="#contact" class="button">Get In Touch</a>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="hero-kicker">— HELLO, I'M</div>
-          <h1>Esther Isioma Abiazie</h1>
-          <div class="hero-brand">EstySmart</div>
-          <p class="tagline">CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.</p>
-          <div class="hero-rule"></div>
+    <div class="hero-image-wrap reveal">
+      <img
+        src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_Profile_Under_1MB.jpg"
+        alt="EstySmart professional portrait"
+        fetchpriority="high"
+      >
+      <div class="hero-image-caption">
+        DATA ANALYSIS · MULTIMEDIA · DIGITAL INNOVATION
+      </div>
+    </div>
 
-          <div class="role-tags">
-            <span class="role-tag">DATA ANALYST</span>
-            <span class="role-tag">MULTIMEDIA SPECIALIST</span>
-            <span class="role-tag">CYBERSECURITY / ETHICAL HACKER</span>
-            <span class="role-tag">DEVOPS TRAINEE</span>
-            <span class="role-tag">DIGITAL SOLUTIONS CREATOR</span>
-          </div>
+  </div>
+</section>
 
-          <p class="hero-description">
-            I am an aspiring digital professional exploring the intersection of data,
-            multimedia, cybersecurity and technology-driven creativity — turning ideas,
-            information and creative concepts into meaningful digital experiences.
-          </p>
+<!-- PROFESSIONAL FOCUS -->
+<section class="focus-section">
+  <div class="container focus-grid">
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore My Work</a>
-            <a class="btn" href="#contact">Get In Touch</a>
-          </div>
+    <article class="focus-card reveal">
+      <div class="focus-icon">▥</div>
+      <h3>Data & Analytics</h3>
+      <p>Data analysis, interpretation, analytical thinking and data presentation.</p>
+    </article>
+
+    <article class="focus-card reveal">
+      <div class="focus-icon">✧</div>
+      <h3>Multimedia & Visual Design</h3>
+      <p>Graphic design, visual communication, multimedia creation and presentation design.</p>
+    </article>
+
+    <article class="focus-card reveal">
+      <div class="focus-icon">⌘</div>
+      <h3>Digital Development</h3>
+      <p>Web development foundations, website building and digital solutions.</p>
+    </article>
+
+    <article class="focus-card reveal">
+      <div class="focus-icon">⬡</div>
+      <h3>Cybersecurity & DevOps</h3>
+      <p>Cybersecurity fundamentals, ethical hacking concepts and DevOps foundations.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+
+    <div class="reveal">
+      <div class="eyebrow">01 · INTRODUCTION</div>
+      <h2 class="about-heading">
+        Where Creativity Meets <span class="gold">Technology.</span>
+      </h2>
+    </div>
+
+    <div class="about-copy reveal">
+      <p>
+        I am an aspiring digital professional with developing interests
+        across data analysis, multimedia production, cybersecurity,
+        ethical hacking, DevOps foundations and digital solutions.
+      </p>
+
+      <p>
+        Through independent projects and structured learning, I explore
+        how information, design and technology can work together to
+        communicate ideas, solve problems and create useful digital experiences.
+      </p>
+
+      <p>
+        My approach combines analytical thinking with creative exploration.
+        I enjoy learning new tools, developing practical projects and
+        presenting ideas in clear, engaging and accessible ways.
+      </p>
+
+      <p>
+        EstySmart represents my interest in connecting creativity,
+        technology and innovation through thoughtful digital work.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>06</strong>
+          <span>Featured Projects</span>
         </div>
+        <div class="stat">
+          <strong>04</strong>
+          <span>Core Focus Areas</span>
+        </div>
+        <div class="stat">
+          <strong>∞</strong>
+          <span>Learning Mindset</span>
+        </div>
+      </div>
+    </div>
 
-        <div class="hero-visual reveal">
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section-dark" id="skills">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">02 · CAPABILITIES</div>
+      <h2 class="section-title reveal">Skills & Areas of <span class="gold">Focus.</span></h2>
+      <p class="section-description reveal">
+        A growing combination of analytical, creative and technology-focused skills.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <article class="skill-card reveal">
+        <h3>Data & Analytics</h3>
+        <div class="skill-tags">
+          <span>Data Analysis</span>
+          <span>Data Interpretation</span>
+          <span>Data Presentation</span>
+          <span>Analytical Thinking</span>
+          <span>Microsoft Excel</span>
+          <span>Data Storytelling</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <h3>Multimedia & Design</h3>
+        <div class="skill-tags">
+          <span>Graphic Design</span>
+          <span>Visual Design</span>
+          <span>Multimedia Design</span>
+          <span>AI Video Creation</span>
+          <span>Content Creation</span>
+          <span>Presentation Design</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <h3>Digital Solutions</h3>
+        <div class="skill-tags">
+          <span>Web Development Foundations</span>
+          <span>Website Building</span>
+          <span>AI Prompt Engineering</span>
+          <span>Digital Advertising</span>
+          <span>Copywriting</span>
+          <span>Digital Documentation</span>
+          <span>Microsoft Word</span>
+          <span>Microsoft PowerPoint</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal">
+        <h3>Technology Learning</h3>
+        <div class="skill-tags">
+          <span>Cybersecurity Fundamentals</span>
+          <span>Ethical Hacking Concepts</span>
+          <span>DevOps Foundations</span>
+          <span>Technology Research</span>
+          <span>Problem Solving</span>
+          <span>Continuous Learning</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">03 · FEATURED PROJECTS</div>
+      <h2 class="section-title reveal">Projects that bring ideas to life.</h2>
+      <p class="section-description reveal">
+        Selected work across website concepts, visual design, multimedia
+        storytelling, data documentation and educational publishing.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <article class="project-card reveal">
+        <div class="project-image">
           <img
-            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_Profile_Under_1MB.jpg"
-            alt="EstySmart professional portrait"
-            fetchpriority="high"
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Abi-JO%20Automobiles%20Luxury%20Showcase.png"
+            alt="ABI-JO Automobiles luxury website showcase"
+            loading="lazy"
           >
-          <div class="visual-caption">DATA ANALYSIS · MULTIMEDIA · DIGITAL INNOVATION</div>
+          <span class="project-number">01</span>
         </div>
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL FOCUS -->
-    <section class="focus-strip">
-      <div class="container focus-grid">
-        <article class="focus-card reveal">
-          <div class="focus-icon">▥</div>
-          <h3>Data & Analytics</h3>
-          <p>Data analysis, interpretation, analytical thinking and data presentation.</p>
-        </article>
-        <article class="focus-card reveal">
-          <div class="focus-icon">✧</div>
-          <h3>Multimedia & Visual Design</h3>
-          <p>Graphic design, visual communication, multimedia creation and presentation design.</p>
-        </article>
-        <article class="focus-card reveal">
-          <div class="focus-icon">⌘</div>
-          <h3>Digital Development</h3>
-          <p>Web development foundations, website building and digital solutions.</p>
-        </article>
-        <article class="focus-card reveal">
-          <div class="focus-icon">⬡</div>
-          <h3>Cybersecurity & DevOps</h3>
-          <p>Cybersecurity fundamentals, ethical hacking concepts and DevOps foundations.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="reveal">
-          <div class="eyebrow">01 · INTRODUCTION</div>
-          <h2 class="about-heading">Where Creativity Meets <span class="gold">Technology.</span></h2>
-        </div>
-        <div class="about-copy reveal">
+        <div class="project-body">
+          <div class="project-category">WEBSITE CONCEPT</div>
+          <h3>ABI-JO Automobiles</h3>
           <p>
-            I am an aspiring digital professional with developing interests across data
-            analysis, multimedia production, cybersecurity, ethical hacking, DevOps
-            foundations and digital solutions.
+            A luxury automotive website concept designed to present vehicle
+            offerings through a polished digital showcase and brand experience.
           </p>
+          <a class="project-link" href="https://abi-joautomobiles.lovable.app/" target="_blank" rel="noopener">
+            Explore Website <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-card reveal">
+        <div class="project-image">
+          <img
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png"
+            alt="Issy Arts and Design visual branding project"
+            loading="lazy"
+          >
+          <span class="project-number">02</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category">VISUAL DESIGN & BRANDING</div>
+          <h3>Issy Arts and Design</h3>
           <p>
-            Through independent projects and structured learning, I explore how information,
-            design and technology can work together to communicate ideas, solve problems
-            and create useful digital experiences.
+            A creative visual design concept exploring event graphics,
+            brand presentation and polished promotional communication.
           </p>
+          <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png" target="_blank" rel="noopener">
+            View Project Image <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project-card reveal">
+        <div class="project-image">
+          <img
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png"
+            alt="HeckyBaba Real Estate Unlimited promotional project"
+            loading="lazy"
+          >
+          <span class="project-number">03</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category">REAL ESTATE MULTIMEDIA</div>
+          <h3>HeckyBaba Real Estate Unlimited</h3>
           <p>
-            My approach combines analytical thinking with creative exploration. I enjoy
-            learning new tools, developing practical projects and presenting ideas in
-            clear, engaging and accessible ways.
+            A promotional multimedia project combining property-focused
+            visuals, brand presentation and video storytelling.
           </p>
-          <div class="stat-row">
-            <div class="stat"><strong>06</strong><span>Featured Projects</span></div>
-            <div class="stat"><strong>04</strong><span>Core Focus Areas</span></div>
-            <div class="stat"><strong>∞</strong><span>Learning Mindset</span></div>
-          </div>
+          <a class="project-link" href="#heckybaba-video">
+            View Featured Thumbnail <span>→</span>
+          </a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- SKILLS -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <div class="eyebrow">02 · CAPABILITIES</div>
-        <h2 class="section-title reveal">Skills & Areas of <span class="gold">Focus.</span></h2>
-        <p class="section-intro reveal">
-          A growing combination of analytical, creative and technology-focused skills.
-        </p>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <h3>Data & Analytics</h3>
-            <div class="skill-list">
-              <span>Data Analysis</span><span>Data Interpretation</span>
-              <span>Data Presentation</span><span>Analytical Thinking</span>
-              <span>Microsoft Excel</span><span>Data Storytelling</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Multimedia & Design</h3>
-            <div class="skill-list">
-              <span>Graphic Design</span><span>Visual Design</span>
-              <span>Multimedia Design</span><span>AI Video Creation</span>
-              <span>Content Creation</span><span>Presentation Design</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Digital Solutions</h3>
-            <div class="skill-list">
-              <span>Web Development Foundations</span><span>Website Building</span>
-              <span>AI Prompt Engineering</span><span>Digital Advertising</span>
-              <span>Copywriting</span><span>Digital Documentation</span>
-              <span>Microsoft Word</span><span>Microsoft PowerPoint</span>
-            </div>
-          </article>
-          <article class="skill-card reveal">
-            <h3>Technology Learning</h3>
-            <div class="skill-list">
-              <span>Cybersecurity Fundamentals</span><span>Ethical Hacking Concepts</span>
-              <span>DevOps Foundations</span><span>Technology Research</span>
-              <span>Problem Solving</span><span>Continuous Learning</span>
-            </div>
-          </article>
+      <!-- PROJECT 4 -->
+      <article class="project-card reveal">
+        <div class="project-image">
+          <img
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png"
+            alt="Data Storytelling and Business Documentation"
+            loading="lazy"
+          >
+          <span class="project-number">04</span>
         </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="eyebrow">03 · FEATURED PROJECTS</div>
-        <h2 class="section-title reveal">Projects that bring ideas to life.</h2>
-        <p class="section-intro reveal">
-          Selected work across website concepts, visual design, multimedia storytelling,
-          data documentation and educational publishing.
-        </p>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Abi-JO%20Automobiles%20Luxury%20Showcase.png" alt="ABI-JO Automobiles project preview" loading="lazy">
-              <span class="project-number">01</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Website Concept</div>
-              <h3>ABI-JO Automobiles</h3>
-              <p>A luxury automotive website concept designed to present vehicle offerings through a polished digital showcase.</p>
-              <a class="project-link" href="https://abi-joautomobiles.lovable.app/" target="_blank" rel="noopener">Explore Project <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png" alt="Issy Arts and Design project preview" loading="lazy">
-              <span class="project-number">02</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Visual Design & Branding</div>
-              <h3>Issy Arts and Design</h3>
-              <p>A creative visual design concept exploring event graphics, brand presentation and polished promotional communication.</p>
-              <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png" target="_blank" rel="noopener">View Project Image <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png" alt="HeckyBaba Real Estate Unlimited project preview" loading="lazy">
-              <span class="project-number">03</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Real Estate Multimedia</div>
-              <h3>HeckyBaba Real Estate Unlimited</h3>
-              <p>A real estate promotional multimedia project combining property-focused visuals and video presentation.</p>
-              <a class="project-link" href="#heckybaba-video">Watch Promotional Video <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png" alt="Data Storytelling and Business Documentation project preview" loading="lazy">
-              <span class="project-number">04</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Data & Documentation</div>
-              <h3>Data Storytelling & Business Documentation</h3>
-              <p>A project exploring the presentation of information through data storytelling, structured documentation and visual communication.</p>
-              <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png" target="_blank" rel="noopener">View Project Image <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png" alt="Microscopic Marvels ebook cover" loading="lazy">
-              <span class="project-number">05</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Educational Publishing</div>
-              <h3>Microscopic Marvels</h3>
-              <p><em>The Hidden Universe Beneath the Microscope</em> — an educational publishing project by Esther Isioma Abiazie.</p>
-              <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png" target="_blank" rel="noopener">View Project Image <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png" alt="Driven by Innovation ebook cover" loading="lazy">
-              <span class="project-number">06</span>
-            </div>
-            <div class="project-body">
-              <div class="project-category">Technology & Publishing</div>
-              <h3>Driven by Innovation</h3>
-              <p><em>The Technology and Vision Behind the Future of Cars</em> — an automotive technology publishing project by Abiazie Emmanuel Nduwuba.</p>
-              <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png" target="_blank" rel="noopener">View Project Image <span>→</span></a>
-            </div>
-          </article>
+        <div class="project-body">
+          <div class="project-category">DATA & DOCUMENTATION</div>
+          <h3>Data Storytelling & Business Documentation</h3>
+          <p>
+            A project exploring the presentation of information through
+            data storytelling, structured documentation and visual communication.
+          </p>
+          <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png" target="_blank" rel="noopener">
+            View Project Image <span>→</span>
+          </a>
         </div>
+      </article>
 
-        <!-- HECKYBABA VIDEO -->
-        <div class="video-panel reveal" id="heckybaba-video">
-          <div>
-            <div class="eyebrow">PROJECT VIDEO</div>
-            <h3>HeckyBaba <span class="gold">in Motion.</span></h3>
-            <p>
-              Watch the promotional video created for HeckyBaba Real Estate Unlimited.
-              This project brings the brand's property presentation into a multimedia format.
-            </p>
-            <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/videos/HeckyBaba-Promo.mp4" target="_blank" rel="noopener">Open Video File <span>→</span></a>
-          </div>
-          <div class="video-wrap">
-            <video controls playsinline preload="metadata"
-              poster="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png">
-              <source src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/videos/HeckyBaba-Promo.mp4" type="video/mp4">
-              Your browser does not support HTML video.
-            </video>
-            <a class="video-fallback" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/videos/HeckyBaba-Promo.mp4" target="_blank" rel="noopener">If the player does not load, open the video directly.</a>
-          </div>
+      <!-- PROJECT 5 -->
+      <article class="project-card reveal">
+        <div class="project-image">
+          <img
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png"
+            alt="Microscopic Marvels educational ebook cover"
+            loading="lazy"
+          >
+          <span class="project-number">05</span>
         </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section section-alt" id="certifications">
-      <div class="container">
-        <div class="eyebrow">04 · CERTIFICATIONS</div>
-        <h2 class="section-title reveal">Learning backed by <span class="gold">achievement.</span></h2>
-        <p class="section-intro reveal">
-          Select a certificate to view the full document. Certificate images remain hidden until opened.
-        </p>
-
-        <div class="cert-grid">
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(1).jpeg">
-            <span><h3>Microsoft Word Processing</h3><p>COMPLETED TRAINING</p></span><span class="cert-view">VIEW</span>
-          </button>
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(2).jpeg">
-            <span><h3>Microsoft PowerPoint</h3><p>COMPLETED TRAINING</p></span><span class="cert-view">VIEW</span>
-          </button>
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM.jpeg">
-            <span><h3>Microsoft Excel</h3><p>COMPLETED TRAINING</p></span><span class="cert-view">VIEW</span>
-          </button>
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM%20(1).jpeg">
-            <span><h3>Data Analysis</h3><p>COMPLETED TRAINING</p></span><span class="cert-view">VIEW</span>
-          </button>
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM.jpeg">
-            <span><h3>Data Analysis</h3><p>ADDITIONAL CERTIFICATE</p></span><span class="cert-view">VIEW</span>
-          </button>
-          <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Screenshot%202026-11-24%20113445.png">
-            <span><h3>Multimedia Specialist</h3><p>COMPLETED TRAINING</p></span><span class="cert-view">VIEW</span>
-          </button>
+        <div class="project-body">
+          <div class="project-category">EDUCATIONAL PUBLISHING</div>
+          <h3>Microscopic Marvels</h3>
+          <p>
+            <em>The Hidden Universe Beneath the Microscope</em> —
+            an educational publishing project by Esther Isioma Abiazie.
+          </p>
+          <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png" target="_blank" rel="noopener">
+            View Project Image <span>→</span>
+          </a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- CERTIFICATE LIGHTBOX -->
-    <div class="lightbox" id="certificateLightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close certificate preview">×</button>
-      <img id="lightboxImage" src="" alt="Selected certificate">
+      <!-- PROJECT 6 -->
+      <article class="project-card reveal">
+        <div class="project-image">
+          <img
+            src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png"
+            alt="Driven by Innovation automotive technology ebook cover"
+            loading="lazy"
+          >
+          <span class="project-number">06</span>
+        </div>
+        <div class="project-body">
+          <div class="project-category">TECHNOLOGY & PUBLISHING</div>
+          <h3>Driven by Innovation</h3>
+          <p>
+            <em>The Technology and Vision Behind the Future of Cars</em> —
+            an automotive technology publishing project by Abiazie Emmanuel Nduwuba.
+          </p>
+          <a class="project-link" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png" target="_blank" rel="noopener">
+            View Project Image <span>→</span>
+          </a>
+        </div>
+      </article>
+
     </div>
 
-    <!-- EDUCATION -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="eyebrow">05 · EDUCATION & DEVELOPMENT</div>
-        <h2 class="section-title reveal">Education & <span class="gold">Continuous Learning.</span></h2>
-        <p class="section-intro reveal">
-          Building a foundation through formal education, completed training and ongoing technology learning.
+    <!-- HECKYBABA VIDEO PRESENTATION -->
+    <div class="video-feature reveal" id="heckybaba-video">
+
+      <div class="video-copy">
+        <div class="eyebrow">FEATURED MULTIMEDIA PROJECT</div>
+
+        <h3>
+          HeckyBaba <span class="gold">Real Estate Unlimited.</span>
+        </h3>
+
+        <p>
+          A promotional multimedia project developed around real estate
+          branding and property presentation. The project combines visual
+          communication with video-based storytelling.
         </p>
 
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2026</div>
-            <h3>St. Agnes Group of School</h3>
-            <p>WAEC / WASSCE — secondary education.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2025</div>
-            <h3>Microsoft Office & Data Analysis</h3>
-            <p>Completed learning in Microsoft Word Processing, Microsoft PowerPoint Presentation, Microsoft Excel and Data Analysis.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2026</div>
-            <h3>Multimedia Specialist</h3>
-            <p>Completed multimedia-focused training involving creative digital communication and visual content production.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2026 — PRESENT</div>
-            <h3>Cybersecurity / Ethical Hacking Training</h3>
-            <p>Ongoing learning in cybersecurity fundamentals and ethical hacking concepts.</p>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2026 — PRESENT</div>
-            <h3>DevOps Analyst Training</h3>
-            <p>Ongoing learning in DevOps foundations, tools and technology workflows.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESOURCES -->
-    <section class="section section-alt" id="resources">
-      <div class="container">
-        <div class="eyebrow">06 · DIGITAL PRESENCE</div>
-        <h2 class="section-title reveal">Explore my <span class="gold">digital world.</span></h2>
-        <p class="section-intro reveal">Find my portfolio, source projects and professional profile through the links below.</p>
-
-        <div class="resource-grid">
-          <article class="resource-card reveal">
-            <div class="resource-icon">⌘</div>
-            <h3>GitHub</h3>
-            <p>Explore repositories, project files and development work.</p>
-            <a class="project-link" href="https://github.com/EstySmart" target="_blank" rel="noopener">Visit GitHub →</a>
-          </article>
-          <article class="resource-card reveal">
-            <div class="resource-icon">✧</div>
-            <h3>Portfolio Website</h3>
-            <p>Explore my digital portfolio and featured work.</p>
-            <a class="project-link" href="https://estysmart.github.io" target="_blank" rel="noopener">Open Portfolio →</a>
-          </article>
-          <article class="resource-card reveal">
-            <div class="resource-icon">◎</div>
-            <h3>LinkedIn</h3>
-            <p>Connect with me and explore my professional learning journey.</p>
-            <a class="project-link" href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">View LinkedIn →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CV -->
-    <section class="section" id="cv">
-      <div class="container">
-        <div class="cv-panel reveal">
-          <div>
-            <div class="eyebrow">PROFESSIONAL PROFILE</div>
-            <h3>Discover my <span class="gold">CV.</span></h3>
-            <p>View or save my updated professional CV for an overview of my skills, training and selected projects.</p>
-          </div>
-          <div class="hero-actions">
-            <a class="btn" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Estysmart_Professional_CV.png" target="_blank" rel="noopener">View CV</a>
-            <a class="btn btn-primary" href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Estysmart_Professional_CV.png" download="Estysmart_Professional_CV.png">Download CV</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="eyebrow">07 · LET'S CONNECT</div>
-        <h2 class="section-title reveal">Ideas begin with a <span class="gold">conversation.</span></h2>
-        <p class="section-intro reveal">
-          For project enquiries, collaborations, learning opportunities or professional connections, feel free to reach out.
+        <p style="margin-top:17px;color:#d6ad55;">
+          Interested in viewing the complete promotional video?
         </p>
 
-        <div class="contact-grid">
-          <div class="contact-copy reveal">
-            <p>
-              I welcome opportunities to learn, contribute, collaborate and explore
-              creative or technology-driven ideas.
-            </p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">LINKEDIN</a>
-              <a href="https://github.com/EstySmart" target="_blank" rel="noopener">GITHUB</a>
-              <a href="https://web.facebook.com/estysmart18" target="_blank" rel="noopener">FACEBOOK</a>
-            </div>
-          </div>
-
-          <div class="reveal">
-            <div class="contact-detail">
-              <span>EMAIL</span>
-              <a href="mailto:isiomaabiazie17@gmail.com">isiomaabiazie17@gmail.com</a>
-            </div>
-            <div class="contact-detail">
-              <span>LOCATION</span>
-              <strong>Owerri, Nigeria</strong>
-            </div>
-            <div class="contact-detail">
-              <span>LINKEDIN</span>
-              <a href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">linkedin.com/in/estysmart</a>
-            </div>
-            <div class="contact-detail">
-              <span>PORTFOLIO</span>
-              <a href="https://estysmart.github.io" target="_blank" rel="noopener">estysmart.github.io</a>
-            </div>
-          </div>
+        <div class="video-contact">
+          <a class="button button-primary"
+             href="mailto:isiomaabiazie17@gmail.com?subject=HeckyBaba%20Promotional%20Video">
+            Contact Me to Get the Video
+          </a>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> ESTYSMART · CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.</p>
-      <a class="back-top" href="#home">BACK TO TOP ↑</a>
+      <div class="video-thumbnail">
+        <img
+          src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png"
+          alt="HeckyBaba Real Estate Unlimited promotional video thumbnail"
+          loading="lazy"
+        >
+        <div class="video-caption">
+          <span class="video-play-symbol">▶</span>
+          <span>HECKYBABA · PROMOTIONAL VIDEO</span>
+        </div>
+      </div>
+
     </div>
-  </footer>
 
-  <script>
-    // Mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+  </div>
+</section>
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.textContent = isOpen ? "×" : "☰";
-    });
+<!-- CERTIFICATIONS -->
+<section class="section section-dark" id="certifications">
+  <div class="container">
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-      });
-    });
+    <div class="section-heading">
+      <div class="eyebrow">04 · CERTIFICATIONS</div>
+      <h2 class="section-title reveal">
+        Learning backed by <span class="gold">achievement.</span>
+      </h2>
+      <p class="section-description reveal">
+        Explore my completed training certificates. Select any certificate
+        to open and view its full image.
+      </p>
+    </div>
 
-    // Certificate viewer
-    const lightbox = document.getElementById("certificateLightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxClose = document.getElementById("lightboxClose");
+    <div class="cert-grid">
 
-    document.querySelectorAll("[data-certificate]").forEach(button => {
-      button.addEventListener("click", () => {
-        lightboxImage.src = button.dataset.certificate;
-        lightbox.classList.add("open");
-        document.body.style.overflow = "hidden";
-        lightboxClose.focus();
-      });
-    });
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(1).jpeg" aria-label="View Microsoft Word Processing certificate">
+        <span>
+          <h3>Microsoft Word Processing Certificate</h3>
+          <p>2025 · COMPLETED TRAINING</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
 
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      lightboxImage.src = "";
-      document.body.style.overflow = "";
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(2).jpeg" aria-label="View Microsoft PowerPoint Presentation certificate">
+        <span>
+          <h3>Microsoft PowerPoint Presentation Certificate</h3>
+          <p>2025 · COMPLETED TRAINING</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
+
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM.jpeg" aria-label="View Microsoft Excel certificate">
+        <span>
+          <h3>Microsoft Excel Certificate</h3>
+          <p>2025 · COMPLETED TRAINING</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
+
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM%20(1).jpeg" aria-label="View Data Analysis certificate">
+        <span>
+          <h3>Data Analysis Certificate</h3>
+          <p>2025 · COMPLETED TRAINING</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
+
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM.jpeg" aria-label="View additional Data Analysis certificate">
+        <span>
+          <h3>Additional Data Analysis Certificate</h3>
+          <p>2025 · ADDITIONAL CERTIFICATE</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
+
+      <button class="cert-card reveal" data-certificate="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Screenshot%202026-11-24%20113445.png" aria-label="View Multimedia Specialist certificate">
+        <span>
+          <h3>Multimedia Specialist Certificate</h3>
+          <p>2026 · COMPLETED TRAINING</p>
+        </span>
+        <span class="cert-open">VIEW</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE VIEWER -->
+<div class="certificate-modal" id="certificateModal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+  <button class="modal-close" id="modalClose" aria-label="Close certificate">×</button>
+  <img id="certificateImage" src="" alt="Selected certificate">
+</div>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">05 · EDUCATION & DEVELOPMENT</div>
+      <h2 class="section-title reveal">
+        Education & <span class="gold">Continuous Learning.</span>
+      </h2>
+      <p class="section-description reveal">
+        Building a foundation through formal education, completed training
+        and ongoing technology learning.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="timeline-item reveal">
+        <div class="timeline-date">2026</div>
+        <h3>St. Agnes Group of School</h3>
+        <p>WAEC / WASSCE — secondary education.</p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <div class="timeline-date">2025</div>
+        <h3>Microsoft Office & Data Analysis</h3>
+        <p>
+          Completed learning in Microsoft Word Processing,
+          Microsoft PowerPoint Presentation, Microsoft Excel and Data Analysis.
+        </p>
+      </article>
+
+      <article class="timeline-item reveal">
+        <div class="timeline-date">2026</div>
+        <h3>Multimedia Specialist</h3>
+        <p>
+          Completed multimedia-focused training involving creative digital
+          communication and visual content production.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="training-grid">
+
+      <article class="training-card reveal">
+        <span class="training-status">ONGOING TRAINING</span>
+        <h3>Cybersecurity / Ethical Hacking</h3>
+        <p>
+          Developing knowledge of cybersecurity fundamentals,
+          security awareness and ethical hacking concepts.
+        </p>
+      </article>
+
+      <article class="training-card reveal">
+        <span class="training-status">ONGOING TRAINING</span>
+        <h3>DevOps Analyst Training</h3>
+        <p>
+          Exploring DevOps foundations, technology workflows,
+          development operations concepts and related tools.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section section-dark" id="resources">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">06 · DIGITAL PRESENCE</div>
+      <h2 class="section-title reveal">
+        Explore my <span class="gold">digital world.</span>
+      </h2>
+      <p class="section-description reveal">
+        Discover my portfolio, source projects and professional profile.
+      </p>
+    </div>
+
+    <div class="resource-grid">
+
+      <article class="resource-card reveal">
+        <div class="resource-icon">⌘</div>
+        <h3>GitHub</h3>
+        <p>Explore repositories, project files and digital work.</p>
+        <a class="project-link" href="https://github.com/EstySmart" target="_blank" rel="noopener">Visit GitHub →</a>
+      </article>
+
+      <article class="resource-card reveal">
+        <div class="resource-icon">✧</div>
+        <h3>Portfolio Website</h3>
+        <p>Explore my featured projects and professional portfolio.</p>
+        <a class="project-link" href="https://estysmart.github.io" target="_blank" rel="noopener">Open Portfolio →</a>
+      </article>
+
+      <article class="resource-card reveal">
+        <div class="resource-icon">◎</div>
+        <h3>LinkedIn</h3>
+        <p>Connect with me and follow my professional learning journey.</p>
+        <a class="project-link" href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">View LinkedIn →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section class="section" id="cv">
+  <div class="container">
+
+    <div class="cv-panel reveal">
+      <div>
+        <div class="eyebrow">PROFESSIONAL PROFILE</div>
+        <h3>Discover my <span class="gold">CV.</span></h3>
+        <p>
+          View or save my updated professional CV for an overview
+          of my skills, training and selected projects.
+        </p>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button"
+           href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Estysmart_Professional_CV.png"
+           target="_blank" rel="noopener">
+          View CV
+        </a>
+
+        <a class="button button-primary"
+           href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Estysmart_Professional_CV.png"
+           download="Estysmart_Professional_CV.png">
+          Download CV
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-dark" id="contact">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">07 · LET'S CONNECT</div>
+      <h2 class="section-title reveal">
+        Ideas begin with a <span class="gold">conversation.</span>
+      </h2>
+      <p class="section-description reveal">
+        For project enquiries, collaborations, learning opportunities
+        or professional connections, feel free to reach out.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <p class="contact-intro">
+          I welcome opportunities to learn, contribute, collaborate
+          and explore creative or technology-driven ideas.
+          I look forward to connecting with people who value
+          creativity, learning and innovation.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">LINKEDIN</a>
+          <a href="https://github.com/EstySmart" target="_blank" rel="noopener">GITHUB</a>
+          <a href="https://web.facebook.com/estysmart18" target="_blank" rel="noopener">FACEBOOK</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+
+        <div class="contact-detail">
+          <span>EMAIL</span>
+          <a href="mailto:isiomaabiazie17@gmail.com">isiomaabiazie17@gmail.com</a>
+        </div>
+
+        <div class="contact-detail">
+          <span>LOCATION</span>
+          <strong>Owerri, Nigeria</strong>
+        </div>
+
+        <div class="contact-detail">
+          <span>LINKEDIN</span>
+          <a href="https://www.linkedin.com/in/estysmart" target="_blank" rel="noopener">linkedin.com/in/estysmart</a>
+        </div>
+
+        <div class="contact-detail">
+          <span>GITHUB</span>
+          <a href="https://github.com/EstySmart" target="_blank" rel="noopener">github.com/EstySmart</a>
+        </div>
+
+        <div class="contact-detail">
+          <span>PORTFOLIO</span>
+          <a href="https://estysmart.github.io" target="_blank" rel="noopener">estysmart.github.io</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>
+      © <span id="currentYear"></span> ESTYSMART ·
+      CREATIVITY. TECHNOLOGY. INNOVATION. IMPACT.
+    </p>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+  </div>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
+
+menuButton.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.textContent = open ? "×" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "☰";
+  });
+});
+
+/* CERTIFICATE VIEWER */
+
+const certificateModal = document.getElementById("certificateModal");
+const certificateImage = document.getElementById("certificateImage");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll("[data-certificate]").forEach(button => {
+  button.addEventListener("click", () => {
+    certificateImage.src = button.dataset.certificate;
+    certificateModal.classList.add("open");
+    document.body.classList.add("modal-open");
+    modalClose.focus();
+  });
+});
+
+function closeCertificate() {
+  certificateModal.classList.remove("open");
+  certificateImage.src = "";
+  document.body.classList.remove("modal-open");
+}
+
+modalClose.addEventListener("click", closeCertificate);
+
+certificateModal.addEventListener("click", event => {
+  if (event.target === certificateModal) {
+    closeCertificate();
+  }
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeCertificate();
+  }
+});
+
+/* SCROLL REVEAL */
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.12 });
 
-    lightboxClose.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", event => {
-      if (event.target === lightbox) closeLightbox();
-    });
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeLightbox();
-    });
+document.querySelectorAll(".reveal").forEach(element => {
+  revealObserver.observe(element);
+});
 
-    // Reveal animation
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
+/* ACTIVE NAVIGATION */
+
+const pageSections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+
+const activeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navItems.forEach(link => {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === "#" + entry.target.id
+        );
       });
-    }, { threshold: 0.12 });
+    }
+  });
+}, { rootMargin: "-35% 0px -55% 0px" });
 
-    document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+pageSections.forEach(section => {
+  activeObserver.observe(section);
+});
 
-    // Active navigation section
-    const sections = document.querySelectorAll("main section[id]");
-    const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+/* FOOTER YEAR */
 
-    const sectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navItems.forEach(item => {
-            item.classList.toggle("active", item.getAttribute("href") === "#" + entry.target.id);
-          });
-        }
-      });
-    }, { rootMargin: "-35% 0px -55% 0px" });
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
 
-    sections.forEach(section => sectionObserver.observe(section));
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
