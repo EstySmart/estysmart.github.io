@@ -7,19 +7,17 @@
   <meta name="theme-color" content="#080F20">
 
   <title>EstySmart | Digital Innovation & Creative Solutions</title>
-
-  <meta name="description" content="Explore the portfolio of Esther Isioma Abiazie, known as EstySmart — a Data Analyst, Multimedia Specialist, Cybersecurity and Ethical Hacker trainee, DevOps trainee, and Digital Solutions Creator.">
-  <meta name="keywords" content="EstySmart, Esther Isioma Abiazie, Data Analyst, Multimedia Specialist, Graphic Design, Cybersecurity, Ethical Hacking, DevOps, Digital Solutions, Web Design">
+  <meta name="description" content="Explore Esther Isioma Abiazie's portfolio — Data Analyst, Multimedia Specialist, Cybersecurity and Ethical Hacker trainee, DevOps trainee and Digital Solutions Creator.">
+  <meta name="keywords" content="EstySmart, Esther Isioma Abiazie, Data Analyst, Multimedia Specialist, Graphic Design, Cybersecurity, Ethical Hacking, DevOps, Digital Solutions">
   <meta name="author" content="Esther Isioma Abiazie">
 
   <meta property="og:title" content="EstySmart | Creativity. Technology. Innovation. Impact.">
-  <meta property="og:description" content="Discover my digital projects, professional skills, creative work, training and portfolio.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Explore my digital projects, creative work, multimedia showcase, certificates and professional learning journey.">
   <meta property="og:url" content="https://estysmart.github.io">
+  <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -78,7 +76,7 @@
     }
 
     .section {
-      padding: 105px 0;
+      padding: 100px 0;
       position: relative;
     }
 
@@ -118,10 +116,6 @@
       color: var(--gold);
     }
 
-    .blue-text {
-      color: var(--blue);
-    }
-
     .gradient-text {
       background: linear-gradient(100deg, var(--gold-light), var(--gold), #fff);
       -webkit-background-clip: text;
@@ -133,11 +127,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 13px 24px;
+      gap: 9px;
+      padding: 12px 21px;
       border-radius: 9px;
       font-weight: 800;
-      font-size: .9rem;
+      font-size: .85rem;
       transition: var(--transition);
       border: 1px solid transparent;
       cursor: pointer;
@@ -146,7 +140,6 @@
     .btn-primary {
       color: #101522;
       background: linear-gradient(120deg, var(--gold-light), var(--gold));
-      box-shadow: 0 8px 25px rgba(214,173,85,.16);
     }
 
     .btn-primary:hover {
@@ -167,9 +160,8 @@
     }
 
     .btn-blue {
-      border-color: var(--blue);
-      color: #fff;
       background: var(--blue);
+      color: white;
     }
 
     .btn-blue:hover {
@@ -185,7 +177,7 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(8,15,32,.92);
+      background: rgba(8,15,32,.94);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(214,173,85,.13);
     }
@@ -204,7 +196,6 @@
       font-family: "Playfair Display", serif;
       font-size: 1.8rem;
       font-weight: 800;
-      letter-spacing: 1px;
       color: var(--gold);
       white-space: nowrap;
     }
@@ -216,13 +207,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 19px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: .83rem;
+      font-size: .8rem;
       font-weight: 700;
       transition: var(--transition);
     }
@@ -232,7 +223,7 @@
     }
 
     .nav-cta {
-      padding: 9px 16px;
+      padding: 9px 15px;
       border: 1px solid var(--gold);
       border-radius: 7px;
       color: var(--gold) !important;
@@ -264,26 +255,12 @@
         var(--navy);
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 430px;
-      height: 430px;
-      border: 1px solid rgba(214,173,85,.09);
-      border-radius: 50%;
-      right: -180px;
-      top: 120px;
-      box-shadow: 0 0 0 45px rgba(214,173,85,.018),
-                  0 0 0 90px rgba(214,173,85,.012);
-    }
-
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
       align-items: center;
       gap: 65px;
       position: relative;
-      z-index: 1;
     }
 
     .hero-label {
@@ -319,23 +296,22 @@
 
     .hero h2 {
       color: var(--gold);
-      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
       margin-bottom: 20px;
-      font-weight: 700;
     }
 
     .hero-description {
       color: var(--muted);
       max-width: 650px;
-      font-size: 1.02rem;
+      font-size: 1rem;
       margin-bottom: 30px;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 35px;
+      gap: 13px;
+      margin-bottom: 32px;
     }
 
     .hero-socials {
@@ -375,16 +351,6 @@
       border-radius: 190px 190px 30px 30px;
       background: linear-gradient(145deg, rgba(214,173,85,.15), rgba(37,133,232,.08));
       box-shadow: var(--shadow);
-      position: relative;
-    }
-
-    .hero-image-frame::before {
-      content: "";
-      position: absolute;
-      inset: 22px -14px -14px 22px;
-      border: 1px solid rgba(37,133,232,.6);
-      border-radius: 190px 190px 30px 30px;
-      z-index: -1;
     }
 
     .hero-image-frame img {
@@ -409,7 +375,6 @@
     .image-caption strong {
       display: block;
       color: var(--gold);
-      font-size: 1rem;
     }
 
     .image-caption small {
@@ -425,7 +390,7 @@
       margin-top: 20px;
     }
 
-    /* PROFESSIONAL TITLES */
+    /* TITLE STRIP */
 
     .title-strip {
       background: #0d192c;
@@ -447,7 +412,7 @@
       border: 1px solid rgba(214,173,85,.22);
       border-radius: 30px;
       color: var(--white);
-      font-size: .84rem;
+      font-size: .82rem;
       font-weight: 700;
       background: rgba(255,255,255,.025);
     }
@@ -498,31 +463,22 @@
       margin-bottom: 20px;
     }
 
-    .about-visual h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .about-visual p {
-      color: var(--muted);
-      max-width: 350px;
-    }
-
+    .about-visual h3,
     .about-content h3 {
       font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.9rem;
+      margin-bottom: 17px;
     }
 
+    .about-visual p,
     .about-content p {
       color: var(--muted);
-      margin-bottom: 17px;
+      margin-bottom: 16px;
     }
 
     .about-highlight {
       padding: 20px;
-      margin: 25px 0;
+      margin: 24px 0;
       border-left: 3px solid var(--gold);
       background: rgba(214,173,85,.06);
       color: var(--white);
@@ -658,6 +614,12 @@
       overflow: hidden;
       background: #111c30;
       position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
     }
 
     .project-image img {
@@ -675,13 +637,37 @@
       position: absolute;
       top: 15px;
       left: 15px;
-      background: rgba(8,15,32,.88);
+      background: rgba(8,15,32,.9);
       border: 1px solid var(--gold);
       color: var(--gold);
       padding: 6px 12px;
       border-radius: 20px;
       font-size: .72rem;
       font-weight: 800;
+      z-index: 2;
+    }
+
+    .image-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 24px 15px 15px;
+      background: linear-gradient(transparent, rgba(0,0,0,.9));
+      color: var(--gold-light);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .project-image:hover .image-overlay,
+    .project-image:focus-visible .image-overlay {
+      opacity: 1;
+    }
+
+    .project-image:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .project-content {
@@ -734,7 +720,7 @@
       font-size: .77rem;
     }
 
-    /* VIDEO */
+    /* HECKYBABA VIDEO */
 
     .video-section {
       background:
@@ -770,10 +756,22 @@
 
     .video-frame video {
       width: 100%;
+      display: block;
       border-radius: 10px;
       background: #000;
       aspect-ratio: 16 / 9;
       object-fit: contain;
+    }
+
+    .video-help {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .video-help a {
+      color: var(--gold);
+      text-decoration: underline;
     }
 
     /* CERTIFICATES */
@@ -845,7 +843,7 @@
       position: fixed;
       z-index: 3000;
       inset: 0;
-      background: rgba(0,0,0,.93);
+      background: rgba(0,0,0,.94);
       align-items: center;
       justify-content: center;
       padding: 30px;
@@ -874,7 +872,7 @@
       cursor: pointer;
     }
 
-    /* EDUCATION AND TRAINING */
+    /* EDUCATION */
 
     .timeline {
       max-width: 850px;
@@ -943,28 +941,26 @@
       font-size: .88rem;
     }
 
-    .training-status {
-      display: inline-block;
-      margin: 5px 0 10px;
-      padding: 5px 10px;
-      border-radius: 20px;
-      color: #a8d5ff;
-      background: rgba(37,133,232,.13);
-      border: 1px solid rgba(37,133,232,.35);
-      font-size: .73rem;
-      font-weight: 800;
-    }
-
+    .training-status,
     .completed-status {
       display: inline-block;
       margin: 5px 0 10px;
       padding: 5px 10px;
       border-radius: 20px;
+      font-size: .73rem;
+      font-weight: 800;
+    }
+
+    .training-status {
+      color: #a8d5ff;
+      background: rgba(37,133,232,.13);
+      border: 1px solid rgba(37,133,232,.35);
+    }
+
+    .completed-status {
       color: var(--gold-light);
       background: rgba(214,173,85,.1);
       border: 1px solid rgba(214,173,85,.3);
-      font-size: .73rem;
-      font-weight: 800;
     }
 
     /* RESOURCES */
@@ -1010,10 +1006,6 @@
       font-size: .82rem;
     }
 
-    .resource-card a:hover {
-      color: var(--gold-light);
-    }
-
     /* CONTACT */
 
     .contact-section {
@@ -1047,7 +1039,7 @@
       border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
-    .contact-detail .detail-icon {
+    .detail-icon {
       color: var(--gold);
       font-size: 1.2rem;
       width: 28px;
@@ -1184,25 +1176,21 @@
       transform: translateY(0);
     }
 
-    /* RESPONSIVE DESIGN */
+    /* RESPONSIVE */
 
     @media (max-width: 1000px) {
       .nav-links {
-        gap: 13px;
+        gap: 12px;
       }
 
       .nav-links a {
-        font-size: .75rem;
+        font-size: .74rem;
       }
 
       .skills-grid,
       .certificates-grid,
       .resources-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-grid {
-        gap: 35px;
       }
     }
 
@@ -1263,10 +1251,6 @@
         margin-top: 20px;
       }
 
-      .about-visual {
-        min-height: 300px;
-      }
-
       .video-description {
         text-align: center;
       }
@@ -1289,14 +1273,6 @@
 
       .hero h1 {
         font-size: 3rem;
-      }
-
-      .hero h2 {
-        font-size: 1rem;
-      }
-
-      .image-caption {
-        left: -12px;
       }
 
       .about-facts {
@@ -1366,7 +1342,7 @@
 
   <main>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="container hero-grid">
 
@@ -1407,31 +1383,19 @@
             <a
               href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_CV_Updated_GitHub_Link.pdf"
               class="btn btn-blue"
-              target="_blank"
-              rel="noopener"
-            >
+              target="_blank" rel="noopener">
               View / Download CV
             </a>
           </div>
 
           <div class="hero-socials">
-            <a class="social-link"
-              href="https://github.com/EstySmart"
-              target="_blank" rel="noopener"
-              aria-label="GitHub">GH</a>
-
-            <a class="social-link"
-              href="https://www.linkedin.com/in/estysmart"
-              target="_blank" rel="noopener"
-              aria-label="LinkedIn">in</a>
-
-            <a class="social-link"
-              href="https://web.facebook.com/estysmart18"
-              target="_blank" rel="noopener"
-              aria-label="Facebook">f</a>
-
-            <a class="social-link"
-              href="mailto:isiomaabiazie17@gmail.com"
+            <a class="social-link" href="https://github.com/EstySmart"
+              target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+            <a class="social-link" href="https://www.linkedin.com/in/estysmart"
+              target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a class="social-link" href="https://web.facebook.com/estysmart18"
+              target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a class="social-link" href="mailto:isiomaabiazie17@gmail.com"
               aria-label="Email">@</a>
           </div>
 
@@ -1445,8 +1409,7 @@
             <img
               src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_Profile_Under_1MB.jpg"
               alt="Esther Isioma Abiazie — EstySmart"
-              loading="eager"
-            >
+              loading="eager">
           </div>
 
           <div class="image-caption">
@@ -1469,7 +1432,7 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
 
@@ -1489,8 +1452,7 @@
             <h3>Ideas Into Digital Experiences</h3>
             <p>
               A personal brand built around creativity, technology,
-              continuous learning and the pursuit of meaningful
-              digital solutions.
+              continuous learning and meaningful digital solutions.
             </p>
           </div>
 
@@ -1539,17 +1501,14 @@
                 <strong>Professional Brand</strong>
                 <span>EstySmart</span>
               </div>
-
               <div class="fact">
                 <strong>Primary Interests</strong>
                 <span>Data, Multimedia & Technology</span>
               </div>
-
               <div class="fact">
                 <strong>Learning Approach</strong>
                 <span>Practical and Project-Based</span>
               </div>
-
               <div class="fact">
                 <strong>Portfolio Platform</strong>
                 <span>GitHub Pages</span>
@@ -1561,7 +1520,7 @@
       </div>
     </section>
 
-    <!-- EXPERTISE AND SKILLS -->
+    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
 
@@ -1715,7 +1674,7 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- PROJECTS -->
     <section class="section" id="projects">
       <div class="container">
 
@@ -1723,180 +1682,208 @@
           <span class="eyebrow">Selected Work</span>
           <h2>Featured <span class="gold-text">Projects</span></h2>
           <p>
-            A collection of independent projects, creative concepts,
-            digital presentations and learning-based work that
-            demonstrate my developing interests and capabilities.
+            Explore my selected website concepts, visual design,
+            multimedia productions, data storytelling and educational
+            publishing projects. Select any cover to view it in detail.
           </p>
         </div>
 
         <div class="projects-grid">
 
-          <!-- PROJECT 1 -->
+          <!-- ABI-JO AUTOMOBILES -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <a class="project-image"
+              href="https://abi-joautomobiles.lovable.app/"
+              target="_blank" rel="noopener"
+              aria-label="Open ABI-JO Automobiles live website">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Abi-JO%20Automobiles%20Luxury%20Showcase.png"
-                alt="ABI-JO Automobiles luxury automotive showcase"
-                loading="lazy"
-              >
+                alt="ABI-JO Automobiles website cover page"
+                loading="lazy">
               <span class="project-number">PROJECT 01</span>
-            </div>
+              <span class="image-overlay">OPEN LIVE WEBSITE ↗</span>
+            </a>
 
             <div class="project-content">
-              <span class="project-category">Website & Digital Showcase</span>
+              <span class="project-category">Website Development & Automotive Branding</span>
               <h3>ABI-JO Automobiles</h3>
               <p>
-                A luxury automotive website concept designed to
-                present vehicle offerings through a polished
-                digital showcase. The project explores automotive
-                presentation, brand identity and online visibility.
+                A luxury automotive website concept featuring a
+                polished digital presentation of vehicle offerings,
+                automotive branding and online showcase design.
               </p>
-
               <div class="project-tools">
                 <span>Website Concept</span>
                 <span>Visual Design</span>
                 <span>Automotive Branding</span>
               </div>
-
               <div class="project-actions">
                 <a href="https://abi-joautomobiles.lovable.app/"
                   target="_blank" rel="noopener"
-                  class="btn btn-primary">Explore Website ↗</a>
+                  class="btn btn-primary">Visit ABI-JO Website ↗</a>
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Abi-JO%20Automobiles%20Luxury%20Showcase.png">
+                  View Cover Page
+                </button>
               </div>
             </div>
           </article>
 
-          <!-- PROJECT 2 -->
+          <!-- ISSY ARTS AND DESIGN -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <button type="button" class="project-image"
+              data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png"
+              aria-label="View Issy Arts and Design cover">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png"
-                alt="Issy Arts and Design visual branding project"
-                loading="lazy"
-              >
+                alt="Issy Arts and Design project cover"
+                loading="lazy">
               <span class="project-number">PROJECT 02</span>
-            </div>
+              <span class="image-overlay">VIEW PROJECT IMAGE ⤢</span>
+            </button>
 
             <div class="project-content">
               <span class="project-category">Graphic Design & Branding</span>
               <h3>Issy Arts and Design</h3>
               <p>
                 A creative visual identity and design concept
-                exploring the relationship between artistic
-                expression, brand presentation and visual
-                communication.
+                exploring artistic expression, brand presentation,
+                composition and visual communication.
               </p>
-
               <div class="project-tools">
                 <span>Graphic Design</span>
                 <span>Brand Identity</span>
                 <span>Visual Creativity</span>
               </div>
+              <div class="project-actions">
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Apr%2028,%202026,%2009_00_25%20PM.png">
+                  View Project ↗
+                </button>
+              </div>
             </div>
           </article>
 
-          <!-- PROJECT 3 -->
+          <!-- HECKYBABA -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <button type="button" class="project-image"
+              data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png"
+              aria-label="View HeckyBaba project cover">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png"
-                alt="HeckyBaba Real Estate Unlimited promotional branding"
-                loading="lazy"
-              >
+                alt="HeckyBaba Real Estate Unlimited project cover"
+                loading="lazy">
               <span class="project-number">PROJECT 03</span>
-            </div>
+              <span class="image-overlay">VIEW PROJECT IMAGE ⤢</span>
+            </button>
 
             <div class="project-content">
-              <span class="project-category">AI-Assisted Video & Promotion</span>
+              <span class="project-category">Multimedia & Promotional Video</span>
               <h3>HeckyBaba Real Estate Unlimited</h3>
               <p>
-                A real estate promotional media project
-                exploring luxury-focused visual presentation,
-                property branding and AI-assisted video
-                storytelling.
+                A real estate promotional media project exploring
+                luxury-focused visual presentation, property branding
+                and AI-assisted video storytelling.
               </p>
-
               <div class="project-tools">
                 <span>AI Video Creation</span>
                 <span>Real Estate Branding</span>
                 <span>Digital Promotion</span>
               </div>
-
               <div class="project-actions">
                 <a href="#video" class="btn btn-primary">
                   Watch Project Video →
                 </a>
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png">
+                  View Cover Page
+                </button>
               </div>
             </div>
           </article>
 
-          <!-- PROJECT 4 -->
+          <!-- DATA STORYTELLING -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <button type="button" class="project-image"
+              data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png"
+              aria-label="View Data Storytelling project cover">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png"
-                alt="Data Storytelling and Business Documentation project"
-                loading="lazy"
-              >
+                alt="Data Storytelling and Business Documentation cover"
+                loading="lazy">
               <span class="project-number">PROJECT 04</span>
-            </div>
+              <span class="image-overlay">VIEW PROJECT IMAGE ⤢</span>
+            </button>
 
             <div class="project-content">
               <span class="project-category">Data Analysis & Documentation</span>
               <h3>Data Storytelling & Business Documentation</h3>
               <p>
-                A project focused on presenting information
-                through structured documentation, data-related
-                storytelling and clear business communication.
+                A project focused on presenting information through
+                structured documentation, data-related storytelling
+                and clear business communication.
               </p>
-
               <div class="project-tools">
                 <span>Data Interpretation</span>
                 <span>Documentation</span>
                 <span>Data Presentation</span>
               </div>
+              <div class="project-actions">
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Data%20Storytelling%20%26%20Documentation.png">
+                  View Project Cover
+                </button>
+              </div>
             </div>
           </article>
 
-          <!-- PROJECT 5 -->
+          <!-- DRIVEN BY INNOVATION -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <button type="button" class="project-image"
+              data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png"
+              aria-label="View Driven by Innovation cover">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png"
-                alt="Driven by Innovation ebook project"
-                loading="lazy"
-              >
+                alt="Driven by Innovation ebook cover"
+                loading="lazy">
               <span class="project-number">PROJECT 05</span>
-            </div>
+              <span class="image-overlay">VIEW PROJECT IMAGE ⤢</span>
+            </button>
 
             <div class="project-content">
               <span class="project-category">Ebook & Technology Research</span>
               <h3>Driven by Innovation</h3>
               <p>
                 <em>The Technology and Vision Behind the Future of Cars</em>
-                is an educational ebook project exploring
-                automotive technology, innovation and the
-                evolving future of mobility.
+                is an educational ebook project exploring automotive
+                technology, innovation and the evolving future of mobility.
               </p>
-
               <div class="project-tools">
                 <span>Research</span>
                 <span>Educational Writing</span>
                 <span>Technology</span>
               </div>
+              <div class="project-actions">
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2006_12_56%20PM.png">
+                  View Ebook Cover
+                </button>
+              </div>
             </div>
           </article>
 
-          <!-- PROJECT 6 -->
+          <!-- MICROSCOPIC MARVELS -->
           <article class="project-card reveal">
-            <div class="project-image">
+            <button type="button" class="project-image"
+              data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png"
+              aria-label="View Microscopic Marvels cover">
               <img
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png"
-                alt="Microscopic Marvels educational ebook project"
-                loading="lazy"
-              >
+                alt="Microscopic Marvels ebook cover"
+                loading="lazy">
               <span class="project-number">PROJECT 06</span>
-            </div>
+              <span class="image-overlay">VIEW PROJECT IMAGE ⤢</span>
+            </button>
 
             <div class="project-content">
               <span class="project-category">Science Ebook & Educational Content</span>
@@ -1907,11 +1894,16 @@
                 microscopic science and the fascinating world
                 beyond ordinary human vision.
               </p>
-
               <div class="project-tools">
                 <span>Science Communication</span>
                 <span>Research</span>
                 <span>Educational Writing</span>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="btn btn-outline"
+                  data-preview="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/ChatGPT%20Image%20Jul%205,%202026,%2007_09_50%20PM.png">
+                  View Ebook Cover
+                </button>
               </div>
             </div>
           </article>
@@ -1920,7 +1912,7 @@
       </div>
     </section>
 
-    <!-- HECKYBABA VIDEO -->
+    <!-- HECKYBABA VIDEO SHOWCASE -->
     <section class="section video-section" id="video">
       <div class="container">
 
@@ -1928,8 +1920,8 @@
           <span class="eyebrow">Multimedia Showcase</span>
           <h2>Featured <span class="gold-text">Video Project</span></h2>
           <p>
-            Explore a promotional video from my multimedia
-            and AI-assisted creative work.
+            Watch the HeckyBaba Real Estate Unlimited promotional
+            video directly from this portfolio.
           </p>
         </div>
 
@@ -1944,9 +1936,9 @@
             </h3>
 
             <p>
-              This promotional project explores luxury real
-              estate presentation through visual storytelling,
-              creative direction and AI-assisted video production.
+              This promotional project explores luxury real estate
+              presentation through visual storytelling, creative
+              direction and AI-assisted video production.
             </p>
 
             <p>
@@ -1957,30 +1949,35 @@
 
             <a
               href="https://github.com/EstySmart/estysmart.github.io/blob/main/videos/HeckyBaba-Promo.mp4"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-outline"
-            >
-              Open Video File ↗
+              target="_blank" rel="noopener"
+              class="btn btn-outline">
+              Open Video on GitHub ↗
             </a>
           </div>
 
           <div class="video-frame reveal">
             <video
+              id="heckyVideo"
               controls
-              preload="metadata"
               playsinline
+              preload="metadata"
               poster="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/HeckyBaba%20Luxury%20Real%20Estate%20Branding.png"
             >
               <source
                 src="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/videos/HeckyBaba-Promo.mp4"
-                type="video/mp4"
-              >
+                type="video/mp4">
+
               Your browser does not support HTML video.
               <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/videos/HeckyBaba-Promo.mp4">
-                Open the video file.
+                Open the video file on GitHub.
               </a>
             </video>
+
+            <p class="video-help" id="videoHelp">
+              If the player does not load, use
+              <a href="https://github.com/EstySmart/estysmart.github.io/blob/main/videos/HeckyBaba-Promo.mp4"
+                target="_blank" rel="noopener">this direct GitHub video link</a>.
+            </p>
           </div>
 
         </div>
@@ -1996,14 +1993,13 @@
           <h2>Certificates & <span class="gold-text">Qualifications</span></h2>
           <p>
             A visual record of selected completed learning
-            programmes and qualifications.
-            Select a certificate to view it in a larger format.
+            programmes and qualifications. Select any certificate
+            to view it in a larger format.
           </p>
         </div>
 
         <div class="certificates-grid">
 
-          <!-- WORD -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(1).jpeg">
@@ -2014,12 +2010,11 @@
             </div>
             <div class="certificate-info">
               <h3>Microsoft Word Processing</h3>
-              <p>Training in document preparation, formatting and word-processing productivity.</p>
+              <p>Document preparation, formatting and word-processing productivity.</p>
               <span class="certificate-year">COMPLETED · 2025</span>
             </div>
           </article>
 
-          <!-- POWERPOINT -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM%20(2).jpeg">
@@ -2030,12 +2025,11 @@
             </div>
             <div class="certificate-info">
               <h3>Microsoft PowerPoint Presentation</h3>
-              <p>Training in presentation development and visual communication.</p>
+              <p>Presentation development and visual communication.</p>
               <span class="certificate-year">COMPLETED · 2025</span>
             </div>
           </article>
 
-          <!-- EXCEL -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.19.54%20AM.jpeg">
@@ -2046,12 +2040,11 @@
             </div>
             <div class="certificate-info">
               <h3>Microsoft Excel</h3>
-              <p>Learning focused on spreadsheet productivity and working with data.</p>
+              <p>Spreadsheet productivity and working with data.</p>
               <span class="certificate-year">COMPLETED · 2025</span>
             </div>
           </article>
 
-          <!-- DATA ANALYSIS 1 -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM%20(1).jpeg">
@@ -2062,12 +2055,11 @@
             </div>
             <div class="certificate-info">
               <h3>Data Analysis</h3>
-              <p>Training in data-related concepts, interpretation and analytical thinking.</p>
+              <p>Data concepts, interpretation and analytical thinking.</p>
               <span class="certificate-year">COMPLETED · 2025</span>
             </div>
           </article>
 
-          <!-- DATA ANALYSIS 2 -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/WhatsApp%20Image%202026-11-24%20at%2011.40.00%20AM.jpeg">
@@ -2083,7 +2075,6 @@
             </div>
           </article>
 
-          <!-- MULTIMEDIA -->
           <article class="certificate-card reveal">
             <div class="certificate-image"
               data-image="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/Screenshot%202026-11-24%20113445.png">
@@ -2094,7 +2085,7 @@
             </div>
             <div class="certificate-info">
               <h3>Multimedia Specialist</h3>
-              <p>Multimedia-related learning and creative digital production.</p>
+              <p>Multimedia learning and creative digital production.</p>
               <span class="certificate-year">COMPLETED · 2026</span>
             </div>
           </article>
@@ -2103,7 +2094,7 @@
       </div>
     </section>
 
-    <!-- EDUCATION AND PROFESSIONAL LEARNING -->
+    <!-- EDUCATION AND TRAINING -->
     <section class="section" id="education">
       <div class="container">
 
@@ -2118,20 +2109,15 @@
 
         <div class="timeline">
 
-          <!-- SCHOOL -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2026</span>
               <h3>St. Agnes Group of School</h3>
               <span class="completed-status">ACADEMIC QUALIFICATION</span>
-              <p>
-                Secondary school education and WAEC/WASSCE
-                qualification.
-              </p>
+              <p>Secondary school education and WAEC/WASSCE qualification.</p>
             </div>
           </article>
 
-          <!-- MULTIMEDIA -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2026</span>
@@ -2145,7 +2131,6 @@
             </div>
           </article>
 
-          <!-- CYBERSECURITY -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2026 – PRESENT</span>
@@ -2153,79 +2138,61 @@
               <span class="training-status">ONGOING TRAINING</span>
               <p>
                 Developing foundational knowledge of cybersecurity
-                principles, ethical hacking concepts, digital
-                security, threat awareness and responsible
-                security practices.
+                principles, ethical hacking concepts, digital security,
+                threat awareness and responsible security practices.
               </p>
             </div>
           </article>
 
-          <!-- DEVOPS -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2026 – PRESENT</span>
               <h3>DevOps Analyst Training</h3>
               <span class="training-status">ONGOING TRAINING</span>
               <p>
-                Building foundational knowledge of DevOps
-                principles, software development workflows,
-                automation concepts, collaboration and
-                deployment practices.
+                Building foundational knowledge of DevOps principles,
+                software development workflows, automation concepts,
+                collaboration and deployment practices.
               </p>
             </div>
           </article>
 
-          <!-- DATA ANALYSIS -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2025</span>
               <h3>Data Analysis Training</h3>
               <span class="completed-status">COMPLETED</span>
               <p>
-                Learning focused on data analysis concepts,
-                data interpretation, analytical thinking
-                and presenting information.
+                Data analysis concepts, data interpretation,
+                analytical thinking and presenting information.
               </p>
             </div>
           </article>
 
-          <!-- EXCEL -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2025</span>
               <h3>Microsoft Excel Training</h3>
               <span class="completed-status">COMPLETED</span>
-              <p>
-                Training in spreadsheet tools and working
-                with structured information.
-              </p>
+              <p>Spreadsheet tools and working with structured information.</p>
             </div>
           </article>
 
-          <!-- WORD -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2025</span>
               <h3>Microsoft Word Processing Training</h3>
               <span class="completed-status">COMPLETED</span>
-              <p>
-                Training in document creation, editing,
-                formatting and word-processing tools.
-              </p>
+              <p>Document creation, editing, formatting and word-processing tools.</p>
             </div>
           </article>
 
-          <!-- POWERPOINT -->
           <article class="timeline-item reveal">
             <div class="timeline-content">
               <span class="timeline-year">2025</span>
               <h3>Microsoft PowerPoint Presentation Training</h3>
               <span class="completed-status">COMPLETED</span>
-              <p>
-                Training in slide creation, presentation
-                design and communicating information
-                through visual presentations.
-              </p>
+              <p>Slide creation, presentation design and visual communication.</p>
             </div>
           </article>
 
@@ -2233,7 +2200,7 @@
       </div>
     </section>
 
-    <!-- PROFESSIONAL RESOURCES -->
+    <!-- RESOURCES -->
     <section class="section" id="resources">
       <div class="container">
 
@@ -2251,81 +2218,48 @@
           <article class="resource-card reveal">
             <div class="resource-icon">📄</div>
             <h3>Professional Curriculum Vitae</h3>
-            <p>
-              View or download my CV to explore my background,
-              learning, skills and professional interests.
-            </p>
-            <a
-              href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_CV_Updated_GitHub_Link.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              VIEW / DOWNLOAD CV →
-            </a>
+            <p>View or download my CV to explore my background, learning and skills.</p>
+            <a href="https://raw.githubusercontent.com/EstySmart/estysmart.github.io/main/EstySmart_CV_Updated_GitHub_Link.pdf"
+              target="_blank" rel="noopener">VIEW / DOWNLOAD CV →</a>
           </article>
 
           <article class="resource-card reveal">
             <div class="resource-icon">💻</div>
             <h3>GitHub Portfolio</h3>
-            <p>
-              Explore my GitHub profile and portfolio repository
-              for selected digital projects and website work.
-            </p>
+            <p>Explore my GitHub profile and portfolio repository.</p>
             <a href="https://github.com/EstySmart"
-              target="_blank" rel="noopener">
-              EXPLORE GITHUB →
-            </a>
+              target="_blank" rel="noopener">EXPLORE GITHUB →</a>
           </article>
 
           <article class="resource-card reveal">
             <div class="resource-icon">🌐</div>
             <h3>Live Portfolio Website</h3>
-            <p>
-              Visit my online portfolio to explore my projects,
-              professional interests and digital work.
-            </p>
+            <p>Visit my online portfolio to explore projects and professional interests.</p>
             <a href="https://estysmart.github.io"
-              target="_blank" rel="noopener">
-              VISIT PORTFOLIO →
-            </a>
+              target="_blank" rel="noopener">VISIT PORTFOLIO →</a>
           </article>
 
           <article class="resource-card reveal">
             <div class="resource-icon">🔗</div>
             <h3>LinkedIn Profile</h3>
-            <p>
-              Connect with me professionally and explore
-              my professional profile and learning journey.
-            </p>
+            <p>Connect with me professionally and explore my learning journey.</p>
             <a href="https://www.linkedin.com/in/estysmart"
-              target="_blank" rel="noopener">
-              VIEW LINKEDIN →
-            </a>
+              target="_blank" rel="noopener">VIEW LINKEDIN →</a>
           </article>
 
           <article class="resource-card reveal">
             <div class="resource-icon">🎨</div>
             <h3>Base44 Portfolio</h3>
-            <p>
-              Explore my additional portfolio presentation
-              and creative digital showcase.
-            </p>
+            <p>Explore my additional portfolio presentation and creative showcase.</p>
             <a href="https://estysmart-18.base44.app/"
-              target="_blank" rel="noopener">
-              OPEN BASE44 PORTFOLIO →
-            </a>
+              target="_blank" rel="noopener">OPEN BASE44 PORTFOLIO →</a>
           </article>
 
           <article class="resource-card reveal">
             <div class="resource-icon">📬</div>
             <h3>Professional Enquiries</h3>
-            <p>
-              For appropriate collaborations, project enquiries,
-              opportunities and professional communication.
-            </p>
-            <a href="mailto:isiomaabiazie17@gmail.com">
-              SEND AN EMAIL →
-            </a>
+            <p>For appropriate collaborations, project enquiries and professional communication.</p>
+            <a href="mailto:isiomaabiazie17@gmail.com">SEND AN EMAIL →</a>
           </article>
 
         </div>
@@ -2340,8 +2274,8 @@
           <span class="eyebrow">Let's Connect</span>
           <h2>Get In <span class="gold-text">Touch</span></h2>
           <p>
-            Have a project idea, professional enquiry or
-            opportunity to discuss? You are welcome to connect.
+            Have a project idea, professional enquiry or opportunity
+            to discuss? You are welcome to connect.
           </p>
         </div>
 
@@ -2349,7 +2283,6 @@
 
           <div class="contact-info reveal">
             <h3>Let's Create Something Meaningful.</h3>
-
             <p>
               I welcome suitable opportunities to learn,
               collaborate, contribute to creative projects
@@ -2361,9 +2294,7 @@
               <div class="detail-icon">✉</div>
               <div>
                 <strong>Email</strong>
-                <a href="mailto:isiomaabiazie17@gmail.com">
-                  isiomaabiazie17@gmail.com
-                </a>
+                <a href="mailto:isiomaabiazie17@gmail.com">isiomaabiazie17@gmail.com</a>
               </div>
             </div>
 
@@ -2372,9 +2303,7 @@
               <div>
                 <strong>LinkedIn</strong>
                 <a href="https://www.linkedin.com/in/estysmart"
-                  target="_blank" rel="noopener">
-                  linkedin.com/in/estysmart
-                </a>
+                  target="_blank" rel="noopener">linkedin.com/in/estysmart</a>
               </div>
             </div>
 
@@ -2383,9 +2312,7 @@
               <div>
                 <strong>GitHub</strong>
                 <a href="https://github.com/EstySmart"
-                  target="_blank" rel="noopener">
-                  github.com/EstySmart
-                </a>
+                  target="_blank" rel="noopener">github.com/EstySmart</a>
               </div>
             </div>
 
@@ -2394,18 +2321,14 @@
               <div>
                 <strong>Facebook</strong>
                 <a href="https://web.facebook.com/estysmart18"
-                  target="_blank" rel="noopener">
-                  facebook.com/estysmart18
-                </a>
+                  target="_blank" rel="noopener">facebook.com/estysmart18</a>
               </div>
             </div>
-
           </div>
 
           <div class="contact-panel reveal">
             <span class="eyebrow">EstySmart</span>
             <h3>Creativity Meets Technology.</h3>
-
             <p>
               Thank you for exploring my portfolio.
               I am continuously learning, developing ideas
@@ -2414,21 +2337,15 @@
             </p>
 
             <a href="mailto:isiomaabiazie17@gmail.com"
-              class="btn btn-primary">
-              Send Me an Email →
-            </a>
+              class="btn btn-primary">Send Me an Email →</a>
 
             <a href="https://www.linkedin.com/in/estysmart"
               target="_blank" rel="noopener"
-              class="btn btn-outline">
-              Connect on LinkedIn
-            </a>
+              class="btn btn-outline">Connect on LinkedIn</a>
 
             <a href="https://github.com/EstySmart"
               target="_blank" rel="noopener"
-              class="btn btn-blue">
-              Explore GitHub
-            </a>
+              class="btn btn-blue">Explore GitHub</a>
           </div>
 
         </div>
@@ -2467,11 +2384,11 @@
     </div>
   </footer>
 
-  <!-- CERTIFICATE LIGHTBOX -->
+  <!-- IMAGE LIGHTBOX -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" id="lightboxClose"
-      aria-label="Close certificate preview">&times;</button>
-    <img src="" alt="Enlarged certificate preview" id="lightboxImage">
+      aria-label="Close image preview">&times;</button>
+    <img src="" alt="Enlarged project or certificate preview" id="lightboxImage">
   </div>
 
   <!-- BACK TO TOP -->
@@ -2489,7 +2406,6 @@
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
-    // CLOSE MOBILE MENU AFTER SELECTING A LINK
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -2498,7 +2414,7 @@
       });
     });
 
-    // REVEAL ELEMENTS ON SCROLL
+    // SCROLL REVEAL
     const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
@@ -2509,36 +2425,27 @@
             observer.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.12
-      });
+      }, { threshold: 0.12 });
 
-      revealElements.forEach(element => {
-        revealObserver.observe(element);
-      });
+      revealElements.forEach(element => revealObserver.observe(element));
     } else {
-      revealElements.forEach(element => {
-        element.classList.add("visible");
-      });
+      revealElements.forEach(element => element.classList.add("visible"));
     }
 
-    // CERTIFICATE LIGHTBOX
+    // IMAGE LIGHTBOX
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
 
-    document.querySelectorAll(".certificate-image").forEach(card => {
-      card.addEventListener("click", () => {
-        const imageUrl = card.getAttribute("data-image");
+    function openLightbox(imageUrl, altText) {
+      if (!imageUrl) return;
 
-        if (!imageUrl) return;
-
-        lightboxImage.src = imageUrl;
-        lightbox.classList.add("active");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      });
-    });
+      lightboxImage.src = imageUrl;
+      lightboxImage.alt = altText || "Enlarged image preview";
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
 
     function closeLightbox() {
       lightbox.classList.remove("active");
@@ -2547,41 +2454,61 @@
       document.body.style.overflow = "";
     }
 
-    lightboxClose.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", event => {
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-    });
-
-    // BACK TO TOP BUTTON
-    const backToTop = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        backToTop.classList.add("visible");
-      } else {
-        backToTop.classList.remove("visible");
-      }
-    });
-
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    // PROJECT COVER PREVIEWS
+    document.querySelectorAll("[data-preview]").forEach(button => {
+      button.addEventListener("click", () => {
+        openLightbox(
+          button.getAttribute("data-preview"),
+          "Enlarged project cover preview"
+        );
       });
     });
 
-    // AUTOMATIC FOOTER YEAR
+    // CERTIFICATE PREVIEWS
+    document.querySelectorAll(".certificate-image").forEach(card => {
+      card.addEventListener("click", () => {
+        openLightbox(
+          card.getAttribute("data-image"),
+          "Enlarged certificate preview"
+        );
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeLightbox();
+    });
+
+    // BACK TO TOP
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      backToTop.classList.toggle("visible", window.scrollY > 500);
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // FOOTER YEAR
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
+
+    // HECKYBABA VIDEO ERROR HANDLING
+    const heckyVideo = document.getElementById("heckyVideo");
+    const videoHelp = document.getElementById("videoHelp");
+
+    heckyVideo.addEventListener("error", () => {
+      videoHelp.innerHTML =
+        'The embedded video could not be loaded. ' +
+        '<a href="https://github.com/EstySmart/estysmart.github.io/blob/main/videos/HeckyBaba-Promo.mp4" target="_blank" rel="noopener">Open the video file on GitHub</a>. ' +
+        'Check that the MP4 exists in the videos folder.';
+    });
   </script>
 
 </body>
